@@ -150,6 +150,9 @@ const TARGET_EMAIL = "mohammedhesham872@gmail.com";
 emailjs.init(PUBLIC_KEY);
 
 const originalExamData = {
+    "title_ar": "الدرس الرابع: حل معادلات القيمة المطلقة",
+    "title_en": "Lesson 4: Solving Absolute Value Equations",
+    "desc_ar": "اختبار تقييمي تفاعلي شامل يغطي تعاريف القيمة المطلقة، حل معادلات القيمة المطلقة البسيطة والمعقدة مع التحقق من الحلول الدخيلة، والنمذجة الواقعية لهوامش التسامح.",
     "sections": [
         {
             "title": {
@@ -159,118 +162,118 @@ const originalExamData = {
             "questions": [
                 {
                     "q": {
-                        "ar": "ما هو التعريف الهندسي للقيمة المطلقة للعدد الحقيقي <span class=\"formula\">|x|</span>؟",
-                        "en": "What is the geometric definition of the absolute value of a real number <span class=\"formula\">|x|</span>?"
+                        "ar": "حل المعادلة الخطية التالية لإيجاد قيمة x: <span class='formula'>3x + 7 = -5</span>",
+                        "en": "Solve the following linear equation for x: <span class='formula'>3x + 7 = -5</span>"
                     },
                     "options": [
                         {
-                            "ar": "المسافة بين العدد <span class=\"formula\">x</span> والصفر على خط الأعداد، وتكون دائماً غير سالبة",
-                            "en": "The distance between the number <span class=\"formula\">x</span> and zero on the number line, and is always non-negative"
+                            "ar": "<span class='formula'>x = -4</span>",
+                            "en": "<span class='formula'>x = -4</span>"
                         },
                         {
-                            "ar": "مربع العدد الحقيقي <span class=\"formula\">x</span> مقسوماً على 2",
-                            "en": "The square of the real number <span class=\"formula\">x</span> divided by 2"
+                            "ar": "<span class='formula'>x = -3</span>",
+                            "en": "<span class='formula'>x = -3</span>"
                         },
                         {
-                            "ar": "القيمة المعاكسة دائماً للعدد <span class=\"formula\">x</span> في الإشارة",
-                            "en": "The value always opposite in sign to the number <span class=\"formula\">x</span>"
+                            "ar": "<span class='formula'>x = 4</span>",
+                            "en": "<span class='formula'>x = 4</span>"
                         },
                         {
-                            "ar": "طول الفترة المغلقة من <span class=\"formula\">-x</span> إلى <span class=\"formula\">x</span>",
-                            "en": "The length of the closed interval from <span class=\"formula\">-x</span> to <span class=\"formula\">x</span>"
+                            "ar": "<span class='formula'>x = -12</span>",
+                            "en": "<span class='formula'>x = -12</span>"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "القيمة المطلقة هندسياً تمثل البعد أو المسافة عن نقطة الصفر، والمسافة دائماً كمية موجبة أو صفر.",
-                        "en": "Geometrically, the absolute value represents the distance from zero, which is always positive or zero."
+                        "ar": "نطرح 7 من الطرفين: <span class='formula'>3x = -12</span>. ثم نقسم على 3: <span class='formula'>x = -4</span>.",
+                        "en": "Subtract 7 from both sides: <span class='formula'>3x = -12</span>. Divide by 3: <span class='formula'>x = -4</span>."
                     }
                 },
                 {
                     "q": {
-                        "ar": "ما هي مجموعة حل معادلة القيمة المطلقة إذا كان الطرف الآخر سالباً، مثل: <span class=\"formula\">|3x + 5| = -7</span>؟",
-                        "en": "What is the solution set of an absolute value equation if the other side is negative, such as: <span class=\"formula\">|3x + 5| = -7</span>?"
+                        "ar": "أوجد مجموعة حل معادلة القيمة المطلقة التالية: <span class='formula'>|x - 4| = 4</span>",
+                        "en": "Find the solution set of the following absolute value equation: <span class='formula'>|x - 4| = 4</span>"
                     },
                     "options": [
                         {
-                            "ar": "المجموعة الخالية Ø (لا يوجد حل حقيقي)",
-                            "en": "The empty set Ø (no real solution)"
+                            "ar": "<span class='formula'>{8, 0}</span>",
+                            "en": "<span class='formula'>{8, 0}</span>"
                         },
                         {
-                            "ar": "المجموعة <span class=\"formula\">{4, -4}</span>",
-                            "en": "The set <span class=\"formula\">{4, -4}</span>"
+                            "ar": "<span class='formula'>{8}</span>",
+                            "en": "<span class='formula'>{8}</span>"
                         },
                         {
-                            "ar": "جميع الأعداد الحقيقية R",
-                            "en": "All real numbers R"
+                            "ar": "<span class='formula'>{-8, 0}</span>",
+                            "en": "<span class='formula'>{-8, 0}</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">x = -4</span> فقط",
-                            "en": "<span class=\"formula\">x = -4</span> only"
+                            "ar": "المجموعة الخالية Ø",
+                            "en": "Empty Set Ø"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "بما أن القيمة المطلقة تعبر عن مسافة فلا يمكن أن تساوي قيمة سالبة أبداً، لذا الحل مستحيل ومجموعة الحل هي الخالية Ø.",
-                        "en": "Since absolute value represents distance, it can never equal a negative number, so the solution is impossible (Ø)."
+                        "ar": "نفصل المعادلة إلى حالتين: إما <span class='formula'>x - 4 = 4 => x = 8</span> أو <span class='formula'>x - 4 = -4 => x = 0</span>. إذن الحل هو <span class='formula'>{8, 0}</span>.",
+                        "en": "Split into two cases: <span class='formula'>x - 4 = 4 => x = 8</span> or <span class='formula'>x - 4 = -4 => x = 0</span>. Thus, the solution set is <span class='formula'>{8, 0}</span>."
                     }
                 },
                 {
                     "q": {
-                        "ar": "في معادلات القيمة المطلقة، ماذا نعني بـ 'الحل الدخيل' (Extraneous Solution)؟",
-                        "en": "In absolute value equations, what do we mean by an 'extraneous solution'?"
+                        "ar": "حل نظام المعادلات الخطية التالي لإيجاد (x, y): <br><span class='formula'>x + y = 6</span><br><span class='formula'>x - y = 4</span>",
+                        "en": "Solve the following system of linear equations for (x, y): <br><span class='formula'>x + y = 6</span><br><span class='formula'>x - y = 4</span>"
                     },
                     "options": [
                         {
-                            "ar": "حل ينتج من العمليات الجبرية الصحيحة ولكنه لا يحقق المعادلة الأصلية عند التعويض بها",
-                            "en": "A solution derived from correct algebraic operations but does not satisfy the original equation upon substitution"
+                            "ar": "<span class='formula'>(5, 1)</span>",
+                            "en": "<span class='formula'>(5, 1)</span>"
                         },
                         {
-                            "ar": "حل خاطئ ناتج عن خطأ في الحسابات الجبرية وعمليات الجمع",
-                            "en": "An incorrect solution resulting from errors in algebraic calculations"
+                            "ar": "<span class='formula'>(1, 5)</span>",
+                            "en": "<span class='formula'>(1, 5)</span>"
                         },
                         {
-                            "ar": "حل يقع خارج مجال الأعداد الحقيقية وينتمي للأعداد التخيلية",
-                            "en": "A solution that lies outside real numbers and belongs to imaginary numbers"
+                            "ar": "<span class='formula'>(6, 0)</span>",
+                            "en": "<span class='formula'>(6, 0)</span>"
                         },
                         {
-                            "ar": "الحل الصدفي الذي يتم تخمينه دون خطوات رياضية",
-                            "en": "A guessed solution obtained without mathematical steps"
+                            "ar": "<span class='formula'>(-5, -1)</span>",
+                            "en": "<span class='formula'>(-5, -1)</span>"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "الحلول الدخيلة تظهر بسبب فصل المعادلة إلى حالتين موجبة وسالبة، ولكن عند التحقق بالتعويض المباشر نكتشف أنها لا تحقق التساوي الأصلي.",
-                        "en": "Extraneous solutions arise from splitting the equation into positive/negative cases but fail to satisfy the original equation when substituted."
+                        "ar": "بجمع المعادلتين نحصل على: <span class='formula'>2x = 10 => x = 5</span>. وبالتعويض نحصل على: <span class='formula'>5 + y = 6 => y = 1</span>.",
+                        "en": "Add the two equations: <span class='formula'>2x = 10 => x = 5</span>. Substitute to find y: <span class='formula'>5 + y = 6 => y = 1</span>."
                     }
                 },
                 {
                     "q": {
-                        "ar": "لأي معادلة على الصورة <span class=\"formula\">|ax + b| = c</span> حيث <span class=\"formula\">c > 0</span>، ما هما المعادلتان المرتبطتان اللتان يجب حلهما؟",
-                        "en": "For any equation of the form <span class=\"formula\">|ax + b| = c</span> where <span class=\"formula\">c > 0</span>, what are the two related equations that must be solved?"
+                        "ar": "حل المتباينة الخطية التالية: <span class='formula'>3x + 4 < 16</span>",
+                        "en": "Solve the following linear inequality: <span class='formula'>3x + 4 < 16</span>"
                     },
                     "options": [
                         {
-                            "ar": "<span class=\"formula\">ax + b = c</span> أو <span class=\"formula\">ax + b = -c</span>",
-                            "en": "<span class=\"formula\">ax + b = c</span> or <span class=\"formula\">ax + b = -c</span>"
+                            "ar": "<span class='formula'>x < 4</span>",
+                            "en": "<span class='formula'>x < 4</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">ax + b = c</span> فقط",
-                            "en": "<span class=\"formula\">ax + b = c</span> only"
+                            "ar": "<span class='formula'>x > 4</span>",
+                            "en": "<span class='formula'>x > 4</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">ax + b = √c</span> أو <span class=\"formula\">ax + b = -√c</span>",
-                            "en": "<span class=\"formula\">ax + b = √c</span> or <span class=\"formula\">ax + b = -√c</span>"
+                            "ar": "<span class='formula'>x < -4</span>",
+                            "en": "<span class='formula'>x < -4</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">-(ax + b) = -c</span> فقط",
-                            "en": "<span class=\"formula\">-(ax + b) = -c</span> only"
+                            "ar": "<span class='formula'>x < 16</span>",
+                            "en": "<span class='formula'>x < 16</span>"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "لإزالة القيمة المطلقة، نقسم المسألة إلى حالتين: إما أن المقدار داخل المطلق يساوي <span class=\"formula\">c</span> أو يساوي <span class=\"formula\">-c</span>.",
-                        "en": "To remove absolute value, split into two cases: the expression inside equals <span class=\"formula\">c</span> or equals <span class=\"formula\">-c</span>."
+                        "ar": "نطرح 4 من الطرفين: <span class='formula'>3x < 12</span>. ثم نقسم على 3 مع بقاء اتجاه المتباينة كما هو: <span class='formula'>x < 4</span>.",
+                        "en": "Subtract 4: <span class='formula'>3x < 12</span>. Divide by 3 keeping the sign: <span class='formula'>x < 4</span>."
                     }
                 }
             ]
@@ -283,118 +286,118 @@ const originalExamData = {
             "questions": [
                 {
                     "q": {
-                        "ar": "قم بتقييم التعبير التالي: <span class=\"formula\">|5 + 2n| - 8.4</span> إذا كان <span class=\"formula\">n = -7.5</span>؟",
-                        "en": "Evaluate the following expression: <span class=\"formula\">|5 + 2n| - 8.4</span> if <span class=\"formula\">n = -7.5</span>?"
+                        "ar": "حل المعادلة الخطية التالية لإيجاد قيمة x: <span class='formula'>3x + 8 = 23</span>",
+                        "en": "Solve the following linear equation for x: <span class='formula'>3x + 8 = 23</span>"
                     },
                     "options": [
                         {
-                            "ar": "<span class=\"formula\">1.6</span>",
-                            "en": "<span class=\"formula\">1.6</span>"
+                            "ar": "<span class='formula'>x = 5</span>",
+                            "en": "<span class='formula'>x = 5</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">-1.6</span>",
-                            "en": "<span class=\"formula\">-1.6</span>"
+                            "ar": "<span class='formula'>x = 6</span>",
+                            "en": "<span class='formula'>x = 6</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">18.4</span>",
-                            "en": "<span class=\"formula\">18.4</span>"
+                            "ar": "<span class='formula'>x = -5</span>",
+                            "en": "<span class='formula'>x = -5</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">1.16</span>",
-                            "en": "<span class=\"formula\">1.16</span>"
+                            "ar": "<span class='formula'>x = 15</span>",
+                            "en": "<span class='formula'>x = 15</span>"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "بالتعويض: <span class=\"formula\">|5 + 2(-7.5)| - 8.4 = |5 - 15| - 8.4 = |-10| - 8.4 = 10 - 8.4 = 1.6</span>.",
-                        "en": "By substitution: <span class=\"formula\">|5 + 2(-7.5)| - 8.4 = |-10| - 8.4 = 10 - 8.4 = 1.6</span>."
+                        "ar": "نطرح 8 من الطرفين: <span class='formula'>3x = 15</span>. ثم نقسم على 3: <span class='formula'>x = 5</span>.",
+                        "en": "Subtract 8 from both sides: <span class='formula'>3x = 15</span>. Divide by 3: <span class='formula'>x = 5</span>."
                     }
                 },
                 {
                     "q": {
-                        "ar": "حل المعادلة التالية: <span class=\"formula\">|x + 12| = 9</span>؟",
-                        "en": "Solve the equation: <span class=\"formula\">|x + 12| = 9</span>?"
+                        "ar": "أوجد مجموعة حل معادلة القيمة المطلقة التالية: <span class='formula'>|x - 4| = 4</span>",
+                        "en": "Find the solution set of the following absolute value equation: <span class='formula'>|x - 4| = 4</span>"
                     },
                     "options": [
                         {
-                            "ar": "<span class=\"formula\">x = -3</span> أو <span class=\"formula\">x = -21</span>",
-                            "en": "<span class=\"formula\">x = -3</span> or <span class=\"formula\">x = -21</span>"
+                            "ar": "<span class='formula'>{8, 0}</span>",
+                            "en": "<span class='formula'>{8, 0}</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">x = 3</span> أو <span class=\"formula\">x = -21</span>",
-                            "en": "<span class=\"formula\">x = 3</span> or <span class=\"formula\">x = -21</span>"
+                            "ar": "<span class='formula'>{8}</span>",
+                            "en": "<span class='formula'>{8}</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">x = -3</span> أو <span class=\"formula\">x = 21</span>",
-                            "en": "<span class=\"formula\">x = -3</span> or <span class=\"formula\">x = 21</span>"
+                            "ar": "<span class='formula'>{-8, 0}</span>",
+                            "en": "<span class='formula'>{-8, 0}</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">x = 3</span> فقط",
-                            "en": "<span class=\"formula\">x = 3</span> only"
+                            "ar": "المجموعة الخالية Ø",
+                            "en": "Empty Set Ø"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "الحالة 1: <span class=\"formula\">x + 12 = 9 -> x = -3</span>. الحالة 2: <span class=\"formula\">x + 12 = -9 -> x = -21</span>. الحلول صحيحة بالتعويض.",
-                        "en": "Case 1: <span class=\"formula\">x + 12 = 9 -> x = -3</span>. Case 2: <span class=\"formula\">x + 12 = -9 -> x = -21</span>. Both are valid."
+                        "ar": "نفصل المعادلة إلى حالتين: إما <span class='formula'>x - 4 = 4 => x = 8</span> أو <span class='formula'>x - 4 = -4 => x = 0</span>. إذن الحل هو <span class='formula'>{8, 0}</span>.",
+                        "en": "Split into two cases: <span class='formula'>x - 4 = 4 => x = 8</span> or <span class='formula'>x - 4 = -4 => x = 0</span>. Thus, the solution set is <span class='formula'>{8, 0}</span>."
                     }
                 },
                 {
                     "q": {
-                        "ar": "أوجد مجموعة حل المعادلة التالية: <span class=\"formula\">3|2x - 3| - 5 = 10</span>؟",
-                        "en": "Find the solution set of the equation: <span class=\"formula\">3|2x - 3| - 5 = 10</span>?"
+                        "ar": "حل نظام المعادلات الخطية التالي لإيجاد (x, y): <br><span class='formula'>x + y = 3</span><br><span class='formula'>x - y = 1</span>",
+                        "en": "Solve the following system of linear equations for (x, y): <br><span class='formula'>x + y = 3</span><br><span class='formula'>x - y = 1</span>"
                     },
                     "options": [
                         {
-                            "ar": "<span class=\"formula\">{4, -1}</span>",
-                            "en": "<span class=\"formula\">{4, -1}</span>"
+                            "ar": "<span class='formula'>(2, 1)</span>",
+                            "en": "<span class='formula'>(2, 1)</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">{4, 1}</span>",
-                            "en": "<span class=\"formula\">{4, 1}</span>"
+                            "ar": "<span class='formula'>(1, 2)</span>",
+                            "en": "<span class='formula'>(1, 2)</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">{-4, 1}</span>",
-                            "en": "<span class=\"formula\">{-4, 1}</span>"
+                            "ar": "<span class='formula'>(3, 0)</span>",
+                            "en": "<span class='formula'>(3, 0)</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">{5, -2}</span>",
-                            "en": "<span class=\"formula\">{5, -2}</span>"
+                            "ar": "<span class='formula'>(-2, -1)</span>",
+                            "en": "<span class='formula'>(-2, -1)</span>"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "نعزل المطلق أولاً بإضافة 5 ثم القسمة على 3: <span class=\"formula\">3|2x - 3| = 15 -> |2x - 3| = 5</span>. الحالة 1: <span class=\"formula\">2x - 3 = 5 -> 2x = 8 -> x = 4</span>. الحالة 2: <span class=\"formula\">2x - 3 = -5 -> 2x = -2 -> x = -1</span>.",
-                        "en": "Isolate first: <span class=\"formula\">3|2x - 3| = 15 -> |2x - 3| = 5</span>. Case 1: <span class=\"formula\">2x - 3 = 5 -> x = 4</span>. Case 2: <span class=\"formula\">2x - 3 = -5 -> x = -1</span>."
+                        "ar": "بجمع المعادلتين نحصل على: <span class='formula'>2x = 4 => x = 2</span>. وبالتعويض نحصل على: <span class='formula'>2 + y = 3 => y = 1</span>.",
+                        "en": "Add the two equations: <span class='formula'>2x = 4 => x = 2</span>. Substitute to find y: <span class='formula'>2 + y = 3 => y = 1</span>."
                     }
                 },
                 {
                     "q": {
-                        "ar": "أوجد قيم <span class=\"formula\">y</span> الممكنة للمعادلة: <span class=\"formula\">|3y - 4| = -2y</span>؟",
-                        "en": "Find possible <span class=\"formula\">y</span> values for: <span class=\"formula\">|3y - 4| = -2y</span>?"
+                        "ar": "حل المتباينة الخطية التالية: <span class='formula'>4x + 3 < 19</span>",
+                        "en": "Solve the following linear inequality: <span class='formula'>4x + 3 < 19</span>"
                     },
                     "options": [
                         {
-                            "ar": "لا يوجد حل حقيقي (Ø) لأن كلا الحلين جبرياً ينتجان مخرجات سالبة للطرف الأيمن مسببة تعارضاً",
-                            "en": "No real solution (Ø) because both algebraic solutions produce negative right-hand values, causing a contradiction"
+                            "ar": "<span class='formula'>x < 4</span>",
+                            "en": "<span class='formula'>x < 4</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">y = 4/5</span> أو <span class=\"formula\">y = 4</span>",
-                            "en": "<span class=\"formula\">y = 4/5</span> or <span class=\"formula\">y = 4</span>"
+                            "ar": "<span class='formula'>x > 4</span>",
+                            "en": "<span class='formula'>x > 4</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">y = -4/5</span> أو <span class=\"formula\">y = -4</span>",
-                            "en": "<span class=\"formula\">y = -4/5</span> or <span class=\"formula\">y = -4</span>"
+                            "ar": "<span class='formula'>x < -4</span>",
+                            "en": "<span class='formula'>x < -4</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">y = 4/5</span> فقط والحل الآخر دخيل",
-                            "en": "<span class=\"formula\">y = 4/5</span> only and the other is extraneous"
+                            "ar": "<span class='formula'>x < 19</span>",
+                            "en": "<span class='formula'>x < 19</span>"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "جبرياً: الحالة 1: <span class=\"formula\">3y - 4 = -2y -> 5y = 4 -> y = 4/5</span>. الحالة 2: <span class=\"formula\">3y - 4 = 2y -> y = 4</span>. لكن بالتعويض: الطرف الأيمن يجب أن يكون غير سالب <span class=\"formula\">-2y >= 0</span> أي <span class=\"formula\">y <= 0</span>. بما أن كلا الحلين موجبين، فكلاهما دخيلان ومجموعة الحل Ø.",
-                        "en": "Algebraically: <span class=\"formula\">y=4/5</span> or <span class=\"formula\">y=4</span>. But substituting back requires <span class=\"formula\">-2y >= 0</span> (meaning <span class=\"formula\">y <= 0</span>). Since both are positive, both are extraneous, so solution is Ø."
+                        "ar": "نطرح 3 من الطرفين: <span class='formula'>4x < 16</span>. ثم نقسم على 4 مع بقاء اتجاه المتباينة كما هو: <span class='formula'>x < 4</span>.",
+                        "en": "Subtract 3: <span class='formula'>4x < 16</span>. Divide by 4 keeping the sign: <span class='formula'>x < 4</span>."
                     }
                 }
             ]
@@ -407,118 +410,118 @@ const originalExamData = {
             "questions": [
                 {
                     "q": {
-                        "ar": "حل المعادلة التالية مع مراعاة الحلول الدخيلة: <span class=\"formula\">|x + 10| = 4x - 8</span>؟",
-                        "en": "Solve the following equation, taking extraneous solutions into account: <span class=\"formula\">|x + 10| = 4x - 8</span>?"
+                        "ar": "حل المعادلة الخطية التالية لإيجاد قيمة x: <span class='formula'>6x + 3 = 15</span>",
+                        "en": "Solve the following linear equation for x: <span class='formula'>6x + 3 = 15</span>"
                     },
                     "options": [
                         {
-                            "ar": "<span class=\"formula\">x = 6</span> هو الحل الصحيح الوحيد، و <span class=\"formula\">x = -0.4</span> حل دخيل",
-                            "en": "<span class=\"formula\">x = 6</span> is the only valid solution, and <span class=\"formula\">x = -0.4</span> is extraneous"
+                            "ar": "<span class='formula'>x = 2</span>",
+                            "en": "<span class='formula'>x = 2</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">x = 6</span> و <span class=\"formula\">x = -0.4</span> كلاهما حلان مقبولان وصحيحان",
-                            "en": "<span class=\"formula\">x = 6</span> and <span class=\"formula\">x = -0.4</span> are both acceptable and correct"
+                            "ar": "<span class='formula'>x = 3</span>",
+                            "en": "<span class='formula'>x = 3</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">x = -0.4</span> هو الحل الصحيح و <span class=\"formula\">x = 6</span> حل دخيل",
-                            "en": "<span class=\"formula\">x = -0.4</span> is valid and <span class=\"formula\">x = 6</span> is extraneous"
+                            "ar": "<span class='formula'>x = -2</span>",
+                            "en": "<span class='formula'>x = -2</span>"
                         },
                         {
-                            "ar": "مجموعة الحل خالية Ø",
-                            "en": "The solution set is empty Ø"
+                            "ar": "<span class='formula'>x = 12</span>",
+                            "en": "<span class='formula'>x = 12</span>"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "الحالة 1: <span class=\"formula\">x + 10 = 4x - 8 -> 3x = 18 -> x = 6</span>. بالتعويض: <span class=\"formula\">|16| = 16</span> (صحيح). الحالة 2: <span class=\"formula\">x + 10 = -(4x - 8) -> x + 10 = -4x + 8 -> 5x = -2 -> x = -0.4</span>. بالتعويض: الطرف الأيمن <span class=\"formula\">4(-0.4) - 8 = -9.6</span> (سالب مرفوض). إذن x = 6 فقط.",
-                        "en": "Case 1: <span class=\"formula\">x = 6</span> (valid). Case 2: <span class=\"formula\">x = -0.4</span> (yields negative RHS, extraneous). Thus x=6 is the only solution."
+                        "ar": "نطرح 3 من الطرفين: <span class='formula'>6x = 12</span>. ثم نقسم على 6: <span class='formula'>x = 2</span>.",
+                        "en": "Subtract 3 from both sides: <span class='formula'>6x = 12</span>. Divide by 6: <span class='formula'>x = 2</span>."
                     }
                 },
                 {
                     "q": {
-                        "ar": "ما هي مجموعة حل المعادلة التالية: <span class=\"formula\">2|x - 4| + 10 = 4</span>؟",
-                        "en": "What is the solution set of the equation: <span class=\"formula\">2|x - 4| + 10 = 4</span>?"
+                        "ar": "أوجد مجموعة حل معادلة القيمة المطلقة التالية: <span class='formula'>|x - 8| = 6</span>",
+                        "en": "Find the solution set of the following absolute value equation: <span class='formula'>|x - 8| = 6</span>"
                     },
                     "options": [
+                        {
+                            "ar": "<span class='formula'>{14, 2}</span>",
+                            "en": "<span class='formula'>{14, 2}</span>"
+                        },
+                        {
+                            "ar": "<span class='formula'>{14}</span>",
+                            "en": "<span class='formula'>{14}</span>"
+                        },
+                        {
+                            "ar": "<span class='formula'>{-14, -2}</span>",
+                            "en": "<span class='formula'>{-14, -2}</span>"
+                        },
                         {
                             "ar": "المجموعة الخالية Ø",
-                            "en": "The empty set Ø"
-                        },
-                        {
-                            "ar": "<span class=\"formula\">{1, 7}</span>",
-                            "en": "<span class=\"formula\">{1, 7}</span>"
-                        },
-                        {
-                            "ar": "<span class=\"formula\">{-1, -7}</span>",
-                            "en": "<span class=\"formula\">{-1, -7}</span>"
-                        },
-                        {
-                            "ar": "<span class=\"formula\">{1}</span> فقط والحل الآخر دخيل",
-                            "en": "<span class=\"formula\">{1}</span> only and the other is extraneous"
+                            "en": "Empty Set Ø"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "بعزل المطلق: <span class=\"formula\">2|x - 4| = -6 -> |x - 4| = -3</span>. بما أن المطلق لا يمكن أن يساوي سالباً، فمجموعة الحل هي Ø مباشرة.",
-                        "en": "Isolating absolute value: <span class=\"formula\">2|x - 4| = -6 -> |x - 4| = -3</span>. Since absolute value cannot be negative, the solution set is Ø."
+                        "ar": "نفصل المعادلة إلى حالتين: إما <span class='formula'>x - 8 = 6 => x = 14</span> أو <span class='formula'>x - 8 = -6 => x = 2</span>. إذن الحل هو <span class='formula'>{14, 2}</span>.",
+                        "en": "Split into two cases: <span class='formula'>x - 8 = 6 => x = 14</span> or <span class='formula'>x - 8 = -6 => x = 2</span>. Thus, the solution set is <span class='formula'>{14, 2}</span>."
                     }
                 },
                 {
                     "q": {
-                        "ar": "حل المعادلة التالية: <span class=\"formula\">|4x - 3| = |2x + 9|</span>؟",
-                        "en": "Solve the equation: <span class=\"formula\">|4x - 3| = |2x + 9|</span>?"
+                        "ar": "حل نظام المعادلات الخطية التالي لإيجاد (x, y): <br><span class='formula'>x + y = 5</span><br><span class='formula'>x - y = 1</span>",
+                        "en": "Solve the following system of linear equations for (x, y): <br><span class='formula'>x + y = 5</span><br><span class='formula'>x - y = 1</span>"
                     },
                     "options": [
                         {
-                            "ar": "<span class=\"formula\">x = 6</span> أو <span class=\"formula\">x = -1</span>",
-                            "en": "<span class=\"formula\">x = 6</span> or <span class=\"formula\">x = -1</span>"
+                            "ar": "<span class='formula'>(3, 2)</span>",
+                            "en": "<span class='formula'>(3, 2)</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">x = -6</span> أو <span class=\"formula\">x = 1</span>",
-                            "en": "<span class=\"formula\">x = -6</span> or <span class=\"formula\">x = 1</span>"
+                            "ar": "<span class='formula'>(2, 3)</span>",
+                            "en": "<span class='formula'>(2, 3)</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">x = 6</span> أو <span class=\"formula\">x = -1.5</span>",
-                            "en": "<span class=\"formula\">x = 6</span> or <span class=\"formula\">x = -1.5</span>"
+                            "ar": "<span class='formula'>(4, 1)</span>",
+                            "en": "<span class='formula'>(4, 1)</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">x = 3</span> أو <span class=\"formula\">x = -4.5</span>",
-                            "en": "<span class=\"formula\">x = 3</span> or <span class=\"formula\">x = -4.5</span>"
+                            "ar": "<span class='formula'>(-3, -2)</span>",
+                            "en": "<span class='formula'>(-3, -2)</span>"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "الحالة 1: <span class=\"formula\">4x - 3 = 2x + 9 -> 2x = 12 -> x = 6</span>. الحالة 2: <span class=\"formula\">4x - 3 = -(2x + 9) -> 4x - 3 = -2x - 9 -> 6x = -6 -> x = -1</span>. كلاهما صحيح بالتعويض.",
-                        "en": "Case 1: <span class=\"formula\">4x - 3 = 2x + 9 -> x = 6</span>. Case 2: <span class=\"formula\">4x - 3 = -2x - 9 -> 6x = -6 -> x = -1</span>. Both are valid."
+                        "ar": "بجمع المعادلتين نحصل على: <span class='formula'>2x = 6 => x = 3</span>. وبالتعويض نحصل على: <span class='formula'>3 + y = 5 => y = 2</span>.",
+                        "en": "Add the two equations: <span class='formula'>2x = 6 => x = 3</span>. Substitute to find y: <span class='formula'>3 + y = 5 => y = 2</span>."
                     }
                 },
                 {
                     "q": {
-                        "ar": "أوجد حلول المعادلة التالية: <span class=\"formula\">|3x - 4| = 2x + 1</span>؟",
-                        "en": "Find the solutions of the equation: <span class=\"formula\">|3x - 4| = 2x + 1</span>?"
+                        "ar": "حل المتباينة الخطية التالية: <span class='formula'>4x + 2 < 10</span>",
+                        "en": "Solve the following linear inequality: <span class='formula'>4x + 2 < 10</span>"
                     },
                     "options": [
                         {
-                            "ar": "<span class=\"formula\">x = 5</span> أو <span class=\"formula\">x = 0.6</span>",
-                            "en": "<span class=\"formula\">x = 5</span> or <span class=\"formula\">x = 0.6</span>"
+                            "ar": "<span class='formula'>x < 2</span>",
+                            "en": "<span class='formula'>x < 2</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">x = 5</span> فقط والآخر حل دخيل",
-                            "en": "<span class=\"formula\">x = 5</span> only and the other is extraneous"
+                            "ar": "<span class='formula'>x > 2</span>",
+                            "en": "<span class='formula'>x > 2</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">x = 0.6</span> فقط والآخر حل دخيل",
-                            "en": "<span class=\"formula\">x = 0.6</span> only and the other is extraneous"
+                            "ar": "<span class='formula'>x < -2</span>",
+                            "en": "<span class='formula'>x < -2</span>"
                         },
                         {
-                            "ar": "المعادلة ليس لها حلول حقيقية Ø",
-                            "en": "The equation has no real solutions Ø"
+                            "ar": "<span class='formula'>x < 10</span>",
+                            "en": "<span class='formula'>x < 10</span>"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "الحالة 1: <span class=\"formula\">3x - 4 = 2x + 1 -> x = 5</span>. الحالة 2: <span class=\"formula\">3x - 4 = -2x - 1 -> 5x = 3 -> x = 3/5 = 0.6</span>. بالتعويض: للحلين الطرف الأيمن موجب، لذا كلاهما حلان صحيحان ومقبولان.",
-                        "en": "Case 1: <span class=\"formula\">3x - 4 = 2x + 1 -> x = 5</span>. Case 2: <span class=\"formula\">3x - 4 = -2x - 1 -> x = 0.6</span>. Both yield positive RHS, so both are valid."
+                        "ar": "نطرح 2 من الطرفين: <span class='formula'>4x < 8</span>. ثم نقسم على 4 مع بقاء اتجاه المتباينة كما هو: <span class='formula'>x < 2</span>.",
+                        "en": "Subtract 2: <span class='formula'>4x < 8</span>. Divide by 4 keeping the sign: <span class='formula'>x < 2</span>."
                     }
                 }
             ]
@@ -531,118 +534,118 @@ const originalExamData = {
             "questions": [
                 {
                     "q": {
-                        "ar": "يجب أن يكون لوزن علبة بسكويت هامش تسامح دقيق. إذا كان الوزن المثالي هو 450 جرام، ومسموح بزيادة أو نقصان 5 جرام كحد أقصى. اكتب معادلة قيمة مطلقة تمثل الوزن الأدنى والأقصى المقبولين؟",
-                        "en": "The weight of a biscuit box has a tolerance. If the ideal weight is 450g, and a maximum variation of 5g is allowed. Write an absolute value equation representing the minimum and maximum acceptable weights?"
+                        "ar": "حل المعادلة الخطية التالية لإيجاد قيمة x: <span class='formula'>3x + 3 = 18</span>",
+                        "en": "Solve the following linear equation for x: <span class='formula'>3x + 3 = 18</span>"
                     },
                     "options": [
                         {
-                            "ar": "<span class=\"formula\">|w - 450| = 5</span>",
-                            "en": "<span class=\"formula\">|w - 450| = 5</span>"
+                            "ar": "<span class='formula'>x = 5</span>",
+                            "en": "<span class='formula'>x = 5</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">|w - 5| = 450</span>",
-                            "en": "<span class=\"formula\">|w - 5| = 450</span>"
+                            "ar": "<span class='formula'>x = 6</span>",
+                            "en": "<span class='formula'>x = 6</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">|450 - 5| = w</span>",
-                            "en": "<span class=\"formula\">|450 - 5| = w</span>"
+                            "ar": "<span class='formula'>x = -5</span>",
+                            "en": "<span class='formula'>x = -5</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">|w + 450| = 5</span>",
-                            "en": "<span class=\"formula\">|w + 450| = 5</span>"
+                            "ar": "<span class='formula'>x = 15</span>",
+                            "en": "<span class='formula'>x = 15</span>"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "المعادلة العامة للتسامح هي: <span class=\"formula\">|x - Ideal| = Tolerance</span>. بالتعويض: <span class=\"formula\">|w - 450| = 5</span>.",
-                        "en": "The general tolerance formula is: <span class=\"formula\">|x - Ideal| = Tolerance</span>. Substituting gives <span class=\"formula\">|w - 450| = 5</span>."
+                        "ar": "نطرح 3 من الطرفين: <span class='formula'>3x = 15</span>. ثم نقسم على 3: <span class='formula'>x = 5</span>.",
+                        "en": "Subtract 3 from both sides: <span class='formula'>3x = 15</span>. Divide by 3: <span class='formula'>x = 5</span>."
                     }
                 },
                 {
                     "q": {
-                        "ar": "من السؤال السابق، أوجد قيم الوزن الصغرى والعظمى لعلبة البسكويت المقبولة؟",
-                        "en": "From the previous question, find the minimum and maximum acceptable weight values for the box?"
+                        "ar": "أوجد مجموعة حل معادلة القيمة المطلقة التالية: <span class='formula'>|x - 2| = 5</span>",
+                        "en": "Find the solution set of the following absolute value equation: <span class='formula'>|x - 2| = 5</span>"
                     },
                     "options": [
                         {
-                            "ar": "الوزن الأصغر 445 جرام والأكبر 455 جرام",
-                            "en": "Minimum weight is 445g and maximum is 455g"
+                            "ar": "<span class='formula'>{7, -3}</span>",
+                            "en": "<span class='formula'>{7, -3}</span>"
                         },
                         {
-                            "ar": "الوزن الأصغر 440 جرام والأكبر 460 جرام",
-                            "en": "Minimum weight is 440g and maximum is 460g"
+                            "ar": "<span class='formula'>{7}</span>",
+                            "en": "<span class='formula'>{7}</span>"
                         },
                         {
-                            "ar": "الوزن الأصغر 450 جرام والأكبر 455 جرام",
-                            "en": "Minimum weight is 450g and maximum is 455g"
+                            "ar": "<span class='formula'>{-7, 3}</span>",
+                            "en": "<span class='formula'>{-7, 3}</span>"
                         },
                         {
-                            "ar": "الوزن الأصغر 445 جرام والأكبر 450 جرام",
-                            "en": "Minimum weight is 445g and maximum is 450g"
+                            "ar": "المجموعة الخالية Ø",
+                            "en": "Empty Set Ø"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "بحل المعادلة <span class=\"formula\">|w - 450| = 5</span>: الحالة 1: <span class=\"formula\">w - 450 = 5 -> w = 455</span>. الحالة 2: <span class=\"formula\">w - 450 = -5 -> w = 445</span>.",
-                        "en": "Solving <span class=\"formula\">|w - 450| = 5</span>: Case 1: <span class=\"formula\">w - 450 = 5 -> w = 455</span>. Case 2: <span class=\"formula\">w - 450 = -5 -> w = 445</span>."
+                        "ar": "نفصل المعادلة إلى حالتين: إما <span class='formula'>x - 2 = 5 => x = 7</span> أو <span class='formula'>x - 2 = -5 => x = -3</span>. إذن الحل هو <span class='formula'>{7, -3}</span>.",
+                        "en": "Split into two cases: <span class='formula'>x - 2 = 5 => x = 7</span> or <span class='formula'>x - 2 = -5 => x = -3</span>. Thus, the solution set is <span class='formula'>{7, -3}</span>."
                     }
                 },
                 {
                     "q": {
-                        "ar": "تنتج آلة كرات زجاجية بقطر عشوائي مقبول هندسياً. إذا كانت المعادلة الممثلة لقطر الكرات هي <span class=\"formula\">|d - 0.75| = 0.02</span> بوصة. أوجد الحدود المسموحة لقطر الكرة؟",
-                        "en": "A machine produces glass marbles with acceptable diameters. If the equation representing marble diameters is <span class=\"formula\">|d - 0.75| = 0.02</span> inches. Find the acceptable diameter limits?"
+                        "ar": "حل نظام المعادلات الخطية التالي لإيجاد (x, y): <br><span class='formula'>x + y = 6</span><br><span class='formula'>x - y = 2</span>",
+                        "en": "Solve the following system of linear equations for (x, y): <br><span class='formula'>x + y = 6</span><br><span class='formula'>x - y = 2</span>"
                     },
                     "options": [
                         {
-                            "ar": "<span class=\"formula\">0.73</span> بوصة و <span class=\"formula\">0.77</span> بوصة",
-                            "en": "<span class=\"formula\">0.73</span> inches and <span class=\"formula\">0.77</span> inches"
+                            "ar": "<span class='formula'>(4, 2)</span>",
+                            "en": "<span class='formula'>(4, 2)</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">0.70</span> بوصة و <span class=\"formula\">0.80</span> بوصة",
-                            "en": "<span class=\"formula\">0.70</span> inches and <span class=\"formula\">0.80</span> inches"
+                            "ar": "<span class='formula'>(2, 4)</span>",
+                            "en": "<span class='formula'>(2, 4)</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">0.74</span> بوصة و <span class=\"formula\">0.76</span> بوصة",
-                            "en": "<span class=\"formula\">0.74</span> inches and <span class=\"formula\">0.76</span> inches"
+                            "ar": "<span class='formula'>(5, 1)</span>",
+                            "en": "<span class='formula'>(5, 1)</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">0.75</span> بوصة و <span class=\"formula\">0.77</span> بوصة",
-                            "en": "<span class=\"formula\">0.75</span> inches and <span class=\"formula\">0.77</span> inches"
+                            "ar": "<span class='formula'>(-4, -2)</span>",
+                            "en": "<span class='formula'>(-4, -2)</span>"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "الحالة 1: <span class=\"formula\">d - 0.75 = 0.02 -> d = 0.77</span>. الحالة 2: <span class=\"formula\">d - 0.75 = -0.02 -> d = 0.73</span>.",
-                        "en": "Case 1: <span class=\"formula\">d - 0.75 = 0.02 -> d = 0.77</span>. Case 2: <span class=\"formula\">d - 0.75 = -0.02 -> d = 0.73</span>."
+                        "ar": "بجمع المعادلتين نحصل على: <span class='formula'>2x = 8 => x = 4</span>. وبالتعويض نحصل على: <span class='formula'>4 + y = 6 => y = 2</span>.",
+                        "en": "Add the two equations: <span class='formula'>2x = 8 => x = 4</span>. Substitute to find y: <span class='formula'>4 + y = 6 => y = 2</span>."
                     }
                 },
                 {
                     "q": {
-                        "ar": "تبلغ درجة الحرارة النموذجية في بيئة تربية نباتات استوائية <span class=\"formula\">26°C</span> وتتفاوت بمقدار لا يتجاوز <span class=\"formula\">3°C</span>. اكتب معادلة قيمة مطلقة تعبر عن درجتي الحرارة القصوى والدنيا؟",
-                        "en": "The typical temperature for breeding tropical plants is <span class=\"formula\">26°C</span> and varies by no more than <span class=\"formula\">3°C</span>. Write an absolute value equation representing maximum and minimum temperatures?"
+                        "ar": "حل المتباينة الخطية التالية: <span class='formula'>3x + 3 < 18</span>",
+                        "en": "Solve the following linear inequality: <span class='formula'>3x + 3 < 18</span>"
                     },
                     "options": [
                         {
-                            "ar": "<span class=\"formula\">|t - 26| = 3</span>",
-                            "en": "<span class=\"formula\">|t - 26| = 3</span>"
+                            "ar": "<span class='formula'>x < 5</span>",
+                            "en": "<span class='formula'>x < 5</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">|t - 3| = 26</span>",
-                            "en": "<span class=\"formula\">|t - 3| = 26</span>"
+                            "ar": "<span class='formula'>x > 5</span>",
+                            "en": "<span class='formula'>x > 5</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">|t + 26| = 3</span>",
-                            "en": "<span class=\"formula\">|t + 26| = 3</span>"
+                            "ar": "<span class='formula'>x < -5</span>",
+                            "en": "<span class='formula'>x < -5</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">|26 - 3| = t</span>",
-                            "en": "<span class=\"formula\">|26 - 3| = t</span>"
+                            "ar": "<span class='formula'>x < 18</span>",
+                            "en": "<span class='formula'>x < 18</span>"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "المعادلة هي البعد بين درجة الحرارة الفعلية والنموذجية يساوي مقدار التفاوت: <span class=\"formula\">|t - 26| = 3</span>.",
-                        "en": "The equation is the difference between actual and target temperatures equals the variance: <span class=\"formula\">|t - 26| = 3</span>."
+                        "ar": "نطرح 3 من الطرفين: <span class='formula'>3x < 15</span>. ثم نقسم على 3 مع بقاء اتجاه المتباينة كما هو: <span class='formula'>x < 5</span>.",
+                        "en": "Subtract 3: <span class='formula'>3x < 15</span>. Divide by 3 keeping the sign: <span class='formula'>x < 5</span>."
                     }
                 }
             ]
@@ -655,118 +658,118 @@ const originalExamData = {
             "questions": [
                 {
                     "q": {
-                        "ar": "قامت كلاً من أمينة وفاطمة بحل المعادلة التالية: <span class=\"formula\">|3x + 14| = -6x</span>. أوجدتا جبرياً القيمتين <span class=\"formula\">x = -14/9</span> و <span class=\"formula\">x = -14/3</span>. قالت أمينة أن كلا الحلين صحيحان، بينما قالت فاطمة أن <span class=\"formula\">x = -14/9</span> فقط حل صحيح والآخر دخيل. من منهما على صواب ولماذا؟",
-                        "en": "Amina and Fatima solved the equation: <span class=\"formula\">|3x + 14| = -6x</span>. They algebraically found <span class=\"formula\">x = -14/9</span> and <span class=\"formula\">x = -14/3</span>. Amina said both are correct, while Fatima said only <span class=\"formula\">x = -14/9</span> is valid and the other is extraneous. Who is correct and why?"
+                        "ar": "حل المعادلة الخطية التالية لإيجاد قيمة x: <span class='formula'>6x + 9 = 21</span>",
+                        "en": "Solve the following linear equation for x: <span class='formula'>6x + 9 = 21</span>"
                     },
                     "options": [
                         {
-                            "ar": "فاطمة على صواب لأن التعويض بالرقم <span class=\"formula\">-14/3</span> يعطي في الطرفين <span class=\"formula\">0 = 28</span> وهو تناقض مستحيل",
-                            "en": "Fatima is correct because substituting <span class=\"formula\">-14/3</span> yields <span class=\"formula\">0 = 28</span>, which is a contradiction"
+                            "ar": "<span class='formula'>x = 2</span>",
+                            "en": "<span class='formula'>x = 2</span>"
                         },
                         {
-                            "ar": "أمينة على صواب لأن كلا القيمتين تجعلان الطرف الأيمن موجباً وبذلك هما حلان مقبولان تماماً",
-                            "en": "Amina is correct because both values make the right side positive and are thus fully acceptable"
+                            "ar": "<span class='formula'>x = 3</span>",
+                            "en": "<span class='formula'>x = 3</span>"
                         },
                         {
-                            "ar": "كلاهما مخطئتان، حيث أن <span class=\"formula\">x = -14/3</span> هو الحل الوحيد المقبول و <span class=\"formula\">-14/9</span> حل دخيل",
-                            "en": "Both are wrong, as <span class=\"formula\">x = -14/3</span> is the only acceptable solution and <span class=\"formula\">-14/9</span> is extraneous"
+                            "ar": "<span class='formula'>x = -2</span>",
+                            "en": "<span class='formula'>x = -2</span>"
                         },
                         {
-                            "ar": "كلاهما على صواب والمعادلة تعبر عن متطابقة دائرية",
-                            "en": "Both are correct, and the equation represents a circular identity"
+                            "ar": "<span class='formula'>x = 12</span>",
+                            "en": "<span class='formula'>x = 12</span>"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "بالتعويض بـ <span class=\"formula\">x = -14/3</span>: الطرف الأيسر <span class=\"formula\">|3(-14/3) + 14| = |-14 + 14| = 0</span>. الطرف الأيمن <span class=\"formula\">-6(-14/3) = 28</span>. نلاحظ <span class=\"formula\">0 ≠ 28</span> مما يعني أنه حل دخيل، بينما <span class=\"formula\">-14/9</span> يعطي <span class=\"formula\">28/3 = 28/3</span> وهو حل صحيح. فاطمة على صواب.",
-                        "en": "Substituting <span class=\"formula\">x = -14/3</span>: LHS = <span class=\"formula\">|0| = 0</span>, RHS = 28. Since <span class=\"formula\">0 ≠ 28</span>, it is extraneous. فاطمة is correct."
+                        "ar": "نطرح 9 من الطرفين: <span class='formula'>6x = 12</span>. ثم نقسم على 6: <span class='formula'>x = 2</span>.",
+                        "en": "Subtract 9 from both sides: <span class='formula'>6x = 12</span>. Divide by 6: <span class='formula'>x = 2</span>."
                     }
                 },
                 {
                     "q": {
-                        "ar": "ما هي مجموعة حل معادلة القيمة المطلقة المزدوجة التالية: <span class=\"formula\">||x| - 3| = 2</span>؟",
-                        "en": "What is the solution set of the following double absolute value equation: <span class=\"formula\">||x| - 3| = 2</span>?"
+                        "ar": "أوجد مجموعة حل معادلة القيمة المطلقة التالية: <span class='formula'>|x - 2| = 4</span>",
+                        "en": "Find the solution set of the following absolute value equation: <span class='formula'>|x - 2| = 4</span>"
                     },
                     "options": [
                         {
-                            "ar": "<span class=\"formula\">{5, -5, 1, -1}</span>",
-                            "en": "<span class=\"formula\">{5, -5, 1, -1}</span>"
+                            "ar": "<span class='formula'>{6, -2}</span>",
+                            "en": "<span class='formula'>{6, -2}</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">{5, 1}</span>",
-                            "en": "<span class=\"formula\">{5, 1}</span>"
+                            "ar": "<span class='formula'>{6}</span>",
+                            "en": "<span class='formula'>{6}</span>"
                         },
                         {
-                            "ar": "<span class=\"formula\">{5, -5}</span>",
-                            "en": "<span class=\"formula\">{5, -5}</span>"
+                            "ar": "<span class='formula'>{-6, 2}</span>",
+                            "en": "<span class='formula'>{-6, 2}</span>"
                         },
-                        {
-                            "ar": "<span class=\"formula\">{-1, 1}</span>",
-                            "en": "<span class=\"formula\">{-1, 1}</span>"
-                        }
-                    ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "الحالة A: <span class=\"formula\">|x| - 3 = 2 -> |x| = 5 -> x = ±5</span>. الحالة B: <span class=\"formula\">|x| - 3 = -2 -> |x| = 1 -> x = ±1</span>. بالتالي مجموعة الحل هي الرباعية المذكورة.",
-                        "en": "Case A: <span class=\"formula\">|x| - 3 = 2 -> |x| = 5 -> x = ±5</span>. Case B: <span class=\"formula\">|x| - 3 = -2 -> |x| = 1 -> x = ±1</span>. Thus, the solution set is <span class=\"formula\">{5, -5, 1, -1}</span>."
-                    }
-                },
-                {
-                    "q": {
-                        "ar": "حل المعادلة التالية: <span class=\"formula\">|x - 3| = 3 - x</span>؟",
-                        "en": "Solve the equation: <span class=\"formula\">|x - 3| = 3 - x</span>?"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class=\"formula\">x ≤ 3</span>",
-                            "en": "<span class=\"formula\">x ≤ 3</span>"
-                        },
-                        {
-                            "ar": "<span class=\"formula\">x ≥ 3</span>",
-                            "en": "<span class=\"formula\">x ≥ 3</span>"
-                        },
-                        {
-                            "ar": "<span class=\"formula\">x = 3</span> فقط",
-                            "en": "<span class=\"formula\">x = 3</span> only"
-                        },
-                        {
-                            "ar": "جميع الأعداد الحقيقية R",
-                            "en": "All real numbers R"
-                        }
-                    ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "بما أن الطرف الأيمن هو <span class=\"formula\">-(x - 3)</span>، فإن المعادلة تصبح <span class=\"formula\">|u| = -u</span>. هذا يكون صحيحاً فقط عندما يكون <span class=\"formula\">u ≤ 0</span>، أي <span class=\"formula\">x - 3 ≤ 0 -> x ≤ 3</span>.",
-                        "en": "Since the RHS is <span class=\"formula\">-(x - 3)</span>, the equation of the form <span class=\"formula\">|u| = -u</span> is true if and only if <span class=\"formula\">u ≤ 0</span>, which means <span class=\"formula\">x ≤ 3</span>."
-                    }
-                },
-                {
-                    "q": {
-                        "ar": "ما هي مجموعة حل المعادلة التالية: <span class=\"formula\">|2x - 1| = x - 2</span>؟",
-                        "en": "What is the solution set of the equation: <span class=\"formula\">|2x - 1| = x - 2</span>?"
-                    },
-                    "options": [
                         {
                             "ar": "المجموعة الخالية Ø",
-                            "en": "The empty set Ø"
-                        },
-                        {
-                            "ar": "<span class=\"formula\">x = -1</span> أو <span class=\"formula\">x = 1</span>",
-                            "en": "<span class=\"formula\">x = -1</span> or <span class=\"formula\">x = 1</span>"
-                        },
-                        {
-                            "ar": "<span class=\"formula\">x = -1</span> هو الحل الوحيد",
-                            "en": "<span class=\"formula\">x = -1</span> is the only solution"
-                        },
-                        {
-                            "ar": "<span class=\"formula\">x = 1</span> هو الحل الوحيد",
-                            "en": "<span class=\"formula\">x = 1</span> is the only solution"
+                            "en": "Empty Set Ø"
                         }
                     ],
                     "correct": 0,
                     "answer": {
-                        "ar": "جبرياً: <span class=\"formula\">2x-1 = x-2 -> x = -1</span> أو <span class=\"formula\">2x-1 = -x+2 -> 3x = 3 -> x = 1</span>. بالتعويض: للحلين الطرف الأيمن <span class=\"formula\">x-2</span> سالب (مرفوض)، فكلاهما دخيل ومجموعة الحل Ø.",
-                        "en": "Algebraically: <span class=\"formula\">x = -1</span> or <span class=\"formula\">x = 1</span>. But substitution yields negative RHS for both, so both are extraneous, leaving the empty set Ø."
+                        "ar": "نفصل المعادلة إلى حالتين: إما <span class='formula'>x - 2 = 4 => x = 6</span> أو <span class='formula'>x - 2 = -4 => x = -2</span>. إذن الحل هو <span class='formula'>{6, -2}</span>.",
+                        "en": "Split into two cases: <span class='formula'>x - 2 = 4 => x = 6</span> or <span class='formula'>x - 2 = -4 => x = -2</span>. Thus, the solution set is <span class='formula'>{6, -2}</span>."
+                    }
+                },
+                {
+                    "q": {
+                        "ar": "حل نظام المعادلات الخطية التالي لإيجاد (x, y): <br><span class='formula'>x + y = 9</span><br><span class='formula'>x - y = 1</span>",
+                        "en": "Solve the following system of linear equations for (x, y): <br><span class='formula'>x + y = 9</span><br><span class='formula'>x - y = 1</span>"
+                    },
+                    "options": [
+                        {
+                            "ar": "<span class='formula'>(5, 4)</span>",
+                            "en": "<span class='formula'>(5, 4)</span>"
+                        },
+                        {
+                            "ar": "<span class='formula'>(4, 5)</span>",
+                            "en": "<span class='formula'>(4, 5)</span>"
+                        },
+                        {
+                            "ar": "<span class='formula'>(6, 3)</span>",
+                            "en": "<span class='formula'>(6, 3)</span>"
+                        },
+                        {
+                            "ar": "<span class='formula'>(-5, -4)</span>",
+                            "en": "<span class='formula'>(-5, -4)</span>"
+                        }
+                    ],
+                    "correct": 0,
+                    "answer": {
+                        "ar": "بجمع المعادلتين نحصل على: <span class='formula'>2x = 10 => x = 5</span>. وبالتعويض نحصل على: <span class='formula'>5 + y = 9 => y = 4</span>.",
+                        "en": "Add the two equations: <span class='formula'>2x = 10 => x = 5</span>. Substitute to find y: <span class='formula'>5 + y = 9 => y = 4</span>."
+                    }
+                },
+                {
+                    "q": {
+                        "ar": "حل المتباينة الخطية التالية: <span class='formula'>5x + 2 < 17</span>",
+                        "en": "Solve the following linear inequality: <span class='formula'>5x + 2 < 17</span>"
+                    },
+                    "options": [
+                        {
+                            "ar": "<span class='formula'>x < 3</span>",
+                            "en": "<span class='formula'>x < 3</span>"
+                        },
+                        {
+                            "ar": "<span class='formula'>x > 3</span>",
+                            "en": "<span class='formula'>x > 3</span>"
+                        },
+                        {
+                            "ar": "<span class='formula'>x < -3</span>",
+                            "en": "<span class='formula'>x < -3</span>"
+                        },
+                        {
+                            "ar": "<span class='formula'>x < 17</span>",
+                            "en": "<span class='formula'>x < 17</span>"
+                        }
+                    ],
+                    "correct": 0,
+                    "answer": {
+                        "ar": "نطرح 2 من الطرفين: <span class='formula'>5x < 15</span>. ثم نقسم على 5 مع بقاء اتجاه المتباينة كما هو: <span class='formula'>x < 3</span>.",
+                        "en": "Subtract 2: <span class='formula'>5x < 15</span>. Divide by 5 keeping the sign: <span class='formula'>x < 3</span>."
                     }
                 }
             ]
