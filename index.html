@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚡ Grade 11 General Math - Lesson 4: Solving Absolute Value Equations (11Jen-math-T1-1.4-exam)</title>
+    <title>🧮 Absolute Value Equations Exam</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght=400;600;700;900&family=Inter:wght=400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Cairo', sans-serif; }
         body.en-mode { font-family: 'Inter', sans-serif; }
@@ -25,7 +25,7 @@
             position: fixed; top: 16px; left: 16px; z-index: 100;
             background: white; padding: 6px; border-radius: 30px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15); display: flex; gap: 4px;
-            border: 2px solid #0d9488;
+            border: 2px solid #b45309;
         }
         [dir="ltr"] .lang-switch { left: auto; right: 16px; }
         .lang-btn {
@@ -33,8 +33,8 @@
             transition: all 0.3s; border: none; font-size: 0.875rem;
             background: transparent; color: #6b7280;
         }
-        .lang-btn.active { background: #0d9488; color: white; box-shadow: 0 2px 6px rgba(13,148,136,0.4); }
-        .lang-btn:hover:not(.active) { background: #f0fdfa; color: #0d9488; }
+        .lang-btn.active { background: #b45309; color: white; box-shadow: 0 2px 6px rgba(180,83,9,0.4); }
+        .lang-btn:hover:not(.active) { background: #fffbeb; color: #b45309; }
         .shuffle-badge {
             display: inline-block;
             background: linear-gradient(135deg, #f59e0b, #ef4444);
@@ -47,7 +47,7 @@
             animation: pulse 2s infinite;
         }
     </style>
-<script src="/_aistudio-iframe.js"></script></head>
+</head>
 <body class="bg-gray-50 text-gray-800 p-4 md:p-8 min-h-screen">
 
     <div class="lang-switch no-print">
@@ -56,24 +56,24 @@
     </div>
 
     <div id="timer-container" class="max-w-4xl mx-auto mb-4 text-center no-print">
-        <div class="bg-white p-4 rounded-xl shadow-md inline-block border-2 border-teal-100">
+        <div class="bg-white p-4 rounded-xl shadow-md inline-block border-2 border-amber-100">
             <span class="text-gray-600 ml-2" data-ar="⏱️ الوقت المتبقي:" data-en="⏱️ Time Remaining:">⏱️ الوقت المتبقي:</span>
-            <span id="timer" class="text-2xl font-bold text-teal-600 font-mono">60:00</span>
+            <span id="timer" class="text-2xl font-bold text-amber-700 font-mono">60:00</span>
             <span class="shuffle-badge" data-ar="🔀 أسئلة عشوائية" data-en="🔀 Random Questions">🔀 أسئلة عشوائية</span>
         </div>
     </div>
 
     <div class="max-w-4xl mx-auto mb-6 flex flex-wrap gap-3 justify-center no-print">
-        <button onclick="toggleAnswers()" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-lg font-medium transition shadow cursor-pointer" data-ar="👁️ إظهار / إخفاء الإجابات" data-en="👁️ Show / Hide Answers">👁️ إظهار / إخفاء الإجابات</button>
+        <button onclick="toggleAnswers()" class="bg-amber-700 hover:bg-amber-800 text-white px-5 py-2 rounded-lg font-medium transition shadow cursor-pointer" data-ar="👁️ إظهار / إخفاء الإجابات" data-en="👁️ Show / Hide Answers">👁️ إظهار / إخفاء الإجابات</button>
         <button onclick="window.print()" class="bg-gray-800 hover:bg-gray-900 text-white px-5 py-2 rounded-lg font-medium transition shadow cursor-pointer" data-ar="🖨️ طباعة / PDF" data-en="🖨️ Print / PDF">🖨️ طباعة / PDF</button>
-        <button onclick="reshuffleExam()" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-5 py-2 rounded-lg font-medium transition shadow cursor-pointer" data-ar="🔀 إعادة خلط الأسئلة" data-en="🔀 Reshuffle Questions">🔀 إعادة خلط الأسئلة</button>
+        <button onclick="reshuffleExam()" class="bg-gradient-to-r from-amber-700 to-orange-700 hover:from-amber-800 hover:to-orange-800 text-white px-5 py-2 rounded-lg font-medium transition shadow cursor-pointer" data-ar="🔀 إعادة خلط الأسئلة" data-en="🔀 Reshuffle Questions">🔀 إعادة خلط الأسئلة</button>
     </div>
 
-    <header class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-8 border-r-4 border-teal-600">
+    <header class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-8 border-r-4 border-amber-700">
         <div class="text-center">
-            <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2" data-ar="⚡ رياضيات الصف الحادي عشر عام" data-en="⚡ Grade 11 General Mathematics">⚡ رياضيات الصف الحادي عشر عام</h1>
-            <h2 class="text-lg text-teal-600 font-semibold" data-ar="الدرس الرابع: حل معادلات القيمة المطلقة (الفصل الدراسي الأول)" data-en="Lesson 4: Solving Absolute Value Equations (Term 1)">الدرس الرابع: حل معادلات القيمة المطلقة (الفصل الدراسي الأول)</h2>
-            <p class="text-sm text-gray-600 mt-2" data-ar="اختبار تقييمي تفاعلي شامل يغطي تعاريف القيمة المطلقة، حل معادلات القيمة المطلقة البسيطة والمعقدة مع التحقق من الحلول الدخيلة، والنمذجة الواقعية لهوامش التسامح." data-en="Lesson 4: Solving Absolute Value Equations complete interactive test aligned with Ministry syllabus.">اختبار تقييمي تفاعلي شامل يغطي تعاريف القيمة المطلقة، حل معادلات القيمة المطلقة البسيطة والمعقدة مع التحقق من الحلول الدخيلة، والنمذجة الواقعية لهوامش التسامح.</p>
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2" data-ar="🧮 امتحان حل معادلات القيمة المطلقة" data-en="🧮 Absolute Value Equations Exam">🧮 امتحان حل معادلات القيمة المطلقة</h1>
+            <h2 class="text-lg text-amber-700 font-semibold" data-ar="Solving Absolute Value Equations" data-en="Solving Absolute Value Equations">Solving Absolute Value Equations</h2>
+            <p class="text-sm text-gray-600 mt-2" data-ar="تعبيرات القيمة المطلقة، حل المعادلات بحالتين، الحلول غير الاعتيادية، والتطبيقات الحياتية" data-en="Absolute value expressions, solving with two cases, unusual solutions, and real-life applications">تعبيرات القيمة المطلقة، حل المعادلات بحالتين، الحلول غير الاعتيادية، والتطبيقات الحياتية</p>
             <p class="text-xs text-orange-600 mt-2 font-semibold" data-ar="⚠️ ملاحظة: يتم خلط ترتيب الأسئلة والخيارات تلقائياً مع كل تحديث للصفحة" data-en="⚠️ Note: Questions and options are randomly shuffled on every page refresh">⚠️ ملاحظة: يتم خلط ترتيب الأسئلة والخيارات تلقائياً مع كل تحديث للصفحة</p>
         </div>
         <div class="mt-4 flex flex-wrap justify-center gap-4 text-sm text-gray-600">
@@ -81,7 +81,7 @@
             <span><span data-ar="👤 الاسم:" data-en="👤 Name:">👤 الاسم:</span> <input type="text" id="studentName" class="border-b border-gray-400 bg-transparent w-32 text-center" placeholder="Enter name"></span>
             <span><span data-ar="🏫 الشعبة:" data-en="🏫 Class:">🏫 الشعبة:</span> <input type="text" id="studentClass" class="border-b border-gray-400 bg-transparent w-28 text-center" placeholder="Class"></span>
             <span><span data-ar="⏱️ المدة: 60 دقيقة" data-en="⏱️ Duration: 60 min">⏱️ المدة: 60 دقيقة</span></span>
-            <span><span data-ar="📊 המجموع: 100 درجة" data-en="📊 Total: 100 pts">📊 المجموع: 100 درجة</span></span>
+            <span><span data-ar="📊 المجموع: 100 درجة" data-en="📊 Total: 100 pts">📊 المجموع: 100 درجة</span></span>
         </div>
     </header>
 
@@ -94,7 +94,7 @@
     <div id="results-panel" class="max-w-4xl mx-auto mt-8 bg-white p-8 rounded-2xl shadow-2xl border-t-4 border-emerald-500 hidden no-print">
         <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center" data-ar="📊 نتائج الامتحان" data-en="📊 Exam Results">📊 نتائج الامتحان</h2>
         <div class="grid md:grid-cols-3 gap-4 mb-6">
-            <div class="bg-blue-50 p-4 rounded-xl text-center"><p data-ar="اسم الطالب" data-en="Student Name">اسم الطالب</p><p id="res-name" class="font-bold text-xl text-teal-700">-</p></div>
+            <div class="bg-blue-50 p-4 rounded-xl text-center"><p data-ar="اسم الطالب" data-en="Student Name">اسم الطالب</p><p id="res-name" class="font-bold text-xl text-amber-700">-</p></div>
             <div class="bg-purple-50 p-4 rounded-xl text-center"><p data-ar="التاريخ" data-en="Date">التاريخ</p><p id="res-date" class="font-bold text-xl text-purple-700">-</p></div>
             <div class="bg-emerald-50 p-4 rounded-xl text-center"><p data-ar="المجموع" data-en="Score">المجموع</p><p id="res-total" class="font-bold text-3xl text-emerald-600">0 / 100</p></div>
         </div>
@@ -107,29 +107,29 @@
             <h3 class="font-bold text-lg mb-4 text-gray-800" data-ar="📈 تفصيل الأداء حسب القسم:" data-en="📈 Performance Breakdown:">📈 تفصيل الأداء حسب القسم:</h3>
             <div class="space-y-3">
                 <div class="flex justify-between items-center">
-                    <span class="text-gray-700" data-ar="الجزء الأول: المفاهيم والقواعد الأساسية والتعريفات" data-en="Part 1: Basic Concepts, Rules, and Definitions">الجزء الأول: المفاهيم والقواعد الأساسية والتعريفات</span>
-                    <span id="sec1-score" class="font-bold text-teal-600">0/4</span>
+                    <span class="text-gray-700" data-ar="تعريف القيمة المطلقة وتقويم التعبيرات" data-en="Definition & Evaluating Expressions">تعريف القيمة المطلقة وتقويم التعبيرات</span>
+                    <span id="sec1-score" class="font-bold text-amber-700">0/4</span>
                 </div>
                 <div class="flex justify-between items-center">
-                    <span class="text-gray-700" data-ar="الجزء الثاني: العمليات الحسابية والحلول العددية الدقيقة" data-en="Part 2: Calculations and Exact Numerical Solutions">الجزء الثاني: العمليات الحسابية والحلول العددية الدقيقة</span>
-                    <span id="sec2-score" class="font-bold text-teal-600">0/4</span>
+                    <span class="text-gray-700" data-ar="حل معادلات القيمة المطلقة الأساسية" data-en="Solving Basic Absolute Value Equations">حل معادلات القيمة المطلقة الأساسية</span>
+                    <span id="sec2-score" class="font-bold text-amber-700">0/4</span>
                 </div>
                 <div class="flex justify-between items-center">
-                    <span class="text-gray-700" data-ar="الجزء الثالث: المهارات المتقدمة والتطبيقات والمسائل" data-en="Part 3: Advanced Skills, Applications, and Problems">الجزء الثالث: المهارات المتقدمة والتطبيقات والمسائل</span>
-                    <span id="sec3-score" class="font-bold text-teal-600">0/4</span>
+                    <span class="text-gray-700" data-ar="الحلول غير الاعتيادية" data-en="Unusual Solutions">الحلول غير الاعتيادية</span>
+                    <span id="sec3-score" class="font-bold text-amber-700">0/4</span>
                 </div>
                 <div class="flex justify-between items-center">
-                    <span class="text-gray-700" data-ar="الجزء الرابع: النمذجة الرياضية والتمثيل البياني والمسائل العملية" data-en="Part 4: Mathematical Modeling, Graphing, and Practical Problems">الجزء الرابع: النمذجة الرياضية والتمثيل البياني والمسائل العملية</span>
-                    <span id="sec4-score" class="font-bold text-teal-600">0/4</span>
+                    <span class="text-gray-700" data-ar="كتابة معادلات من مسائل حياتية" data-en="Writing Equations from Real-Life Problems">كتابة معادلات من مسائل حياتية</span>
+                    <span id="sec4-score" class="font-bold text-amber-700">0/4</span>
                 </div>
                 <div class="flex justify-between items-center">
-                    <span class="text-gray-700" data-ar="الجزء الخامس: مهارات التفكير العليا والتحليل والربط المنطقي" data-en="Part 5: Higher-Order Thinking, Analysis, and Logical Connections">الجزء الخامس: مهارات التفكير العليا والتحليل والربط المنطقي</span>
-                    <span id="sec5-score" class="font-bold text-teal-600">0/4</span>
+                    <span class="text-gray-700" data-ar="حالات خاصة ومسائل متقدمة" data-en="Special Cases & Advanced Problems">حالات خاصة ومسائل متقدمة</span>
+                    <span id="sec5-score" class="font-bold text-amber-700">0/4</span>
                 </div>
             </div>
         </div>
         <div class="text-center mb-6">
-            <button id="sendEmailBtn" onclick="sendResultsToEmail()" class="bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white text-lg px-8 py-3 rounded-xl font-bold shadow-xl transition transform hover:scale-105 cursor-pointer" data-ar="📧 إرسال النتائج للمعلم" data-en="📧 Send Results to Teacher">📧 إرسال النتائج للمعلم</button>
+            <button id="sendEmailBtn" onclick="sendResultsToEmail()" class="bg-gradient-to-r from-amber-700 to-orange-700 hover:from-amber-800 hover:to-orange-800 text-white text-lg px-8 py-3 rounded-xl font-bold shadow-xl transition transform hover:scale-105 cursor-pointer" data-ar="📧 إرسال النتائج للمعلم" data-en="📧 Send Results to Teacher">📧 إرسال النتائج للمعلم</button>
             <p id="emailStatus" class="text-sm mt-2 text-center font-medium"></p>
         </div>
         <div class="flex gap-3 justify-center">
@@ -138,10 +138,11 @@
     </div>
 
     <footer class="max-w-4xl mx-auto mt-10 mb-8 text-center text-gray-500 text-sm no-print">
-        © <span data-ar="رياضيات الصف 11 عام | الدرس الرابع: حل معادلات القيمة المطلقة" data-en="Grade 11 General Math | Lesson 4: Solving Absolute Value Equations">رياضيات الصف 11 عام | الدرس الرابع: حل معادلات القيمة المطلقة</span> | Platform 4U Education
+        © <span data-ar="Absolute Value Equations" data-en="Absolute Value Equations">Absolute Value Equations</span> | Mr. Mohammed Hesham
     </footer>
 
 <script>
+// ==================== EmailJS Settings ====================
 const PUBLIC_KEY = "Rb3Lq8tXaFmc5YHUH";
 const SERVICE_ID = "service_w15m64i";
 const TEMPLATE_ID = "template_5b0u2tq";
@@ -150,627 +151,254 @@ const TARGET_EMAIL = "mohammedhesham872@gmail.com";
 emailjs.init(PUBLIC_KEY);
 
 const originalExamData = {
-    "title_ar": "الدرس الرابع: حل معادلات القيمة المطلقة",
-    "title_en": "Lesson 4: Solving Absolute Value Equations",
-    "desc_ar": "اختبار تقييمي تفاعلي شامل يغطي تعاريف القيمة المطلقة، حل معادلات القيمة المطلقة البسيطة والمعقدة مع التحقق من الحلول الدخيلة، والنمذجة الواقعية لهوامش التسامح.",
-    "sections": [
+    sections: [
         {
-            "title": {
-                "ar": "🔹 الجزء الأول: المفاهيم والقواعد الأساسية والتعريفات",
-                "en": "🔹 Part 1: Basic Concepts, Rules, and Definitions"
-            },
-            "questions": [
+            id: 'sec1',
+            title: { ar: '🔹 الجزء الأول: تعريف القيمة المطلقة وتقويم التعبيرات', en: '🔹 Part 1: Definition & Evaluating Expressions' },
+            questions: [
                 {
-                    "q": {
-                        "ar": "حل المعادلة الخطية التالية لإيجاد قيمة x: <span class='formula'>3x + 7 = -5</span>",
-                        "en": "Solve the following linear equation for x: <span class='formula'>3x + 7 = -5</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>x = -4</span>",
-                            "en": "<span class='formula'>x = -4</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = -3</span>",
-                            "en": "<span class='formula'>x = -3</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = 4</span>",
-                            "en": "<span class='formula'>x = 4</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = -12</span>",
-                            "en": "<span class='formula'>x = -12</span>"
-                        }
+                    q: { ar: 'ما تعريف القيمة المطلقة لعدد حقيقي a؟', en: 'What is the definition of the absolute value of a real number a?' },
+                    options: [
+                        { ar: 'إذا كانت a موجبة أو صفر فالقيمة المطلقة هي a، وإذا كانت سالبة فالقيمة المطلقة هي عكسها a-', en: 'If a is positive or zero, the absolute value is a; if a is negative, the absolute value is its opposite -a' },
+                        { ar: 'القيمة المطلقة دائماً تساوي العدد نفسه بغض النظر عن الإشارة', en: 'The absolute value always equals the number itself regardless of sign' },
+                        { ar: 'القيمة المطلقة تساوي نصف العدد', en: 'The absolute value equals half the number' },
+                        { ar: 'القيمة المطلقة غير معرفة للأعداد السالبة', en: 'Absolute value is undefined for negative numbers' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نطرح 7 من الطرفين: <span class='formula'>3x = -12</span>. ثم نقسم على 3: <span class='formula'>x = -4</span>.",
-                        "en": "Subtract 7 from both sides: <span class='formula'>3x = -12</span>. Divide by 3: <span class='formula'>x = -4</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'ألي رقم حقيقي a، في حال أن a كانت موجبة أو صفر، فإن القيمة المطلقة لـ a هي a، وفي حال كانت a سالبة، فإن القيمة المطلقة لـ a هي عكس a', en: 'For any real number a, if a is positive or zero, its absolute value is a; if a is negative, its absolute value is the opposite of a' }
                 },
                 {
-                    "q": {
-                        "ar": "أوجد مجموعة حل معادلة القيمة المطلقة التالية: <span class='formula'>|x - 4| = 4</span>",
-                        "en": "Find the solution set of the following absolute value equation: <span class='formula'>|x - 4| = 4</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>{8, 0}</span>",
-                            "en": "<span class='formula'>{8, 0}</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>{8}</span>",
-                            "en": "<span class='formula'>{8}</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>{-8, 0}</span>",
-                            "en": "<span class='formula'>{-8, 0}</span>"
-                        },
-                        {
-                            "ar": "المجموعة الخالية Ø",
-                            "en": "Empty Set Ø"
-                        }
+                    q: { ar: 'ماذا تمثل القيمة المطلقة لعدد هندسياً؟', en: 'What does the absolute value of a number represent geometrically?' },
+                    options: [
+                        { ar: 'المسافة بين الرقم وبين الصفر على خط الأرقام', en: 'The distance between the number and zero on the number line' },
+                        { ar: 'نصف المسافة بين العدد والصفر', en: 'Half the distance between the number and zero' },
+                        { ar: 'مربع العدد', en: 'The square of the number' },
+                        { ar: 'لا تمثل شيئاً هندسياً', en: 'It does not represent anything geometrically' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نفصل المعادلة إلى حالتين: إما <span class='formula'>x - 4 = 4 => x = 8</span> أو <span class='formula'>x - 4 = -4 => x = 0</span>. إذن الحل هو <span class='formula'>{8, 0}</span>.",
-                        "en": "Split into two cases: <span class='formula'>x - 4 = 4 => x = 8</span> or <span class='formula'>x - 4 = -4 => x = 0</span>. Thus, the solution set is <span class='formula'>{8, 0}</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'القيمة المطلقة لرقم هي المسافة بينه وبين الرقم صفر على خط األرقام', en: 'The absolute value of a number is the distance between it and zero on the number line' }
                 },
                 {
-                    "q": {
-                        "ar": "حل نظام المعادلات الخطية التالي لإيجاد (x, y): <br><span class='formula'>x + y = 6</span><br><span class='formula'>x - y = 4</span>",
-                        "en": "Solve the following system of linear equations for (x, y): <br><span class='formula'>x + y = 6</span><br><span class='formula'>x - y = 4</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>(5, 1)</span>",
-                            "en": "<span class='formula'>(5, 1)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(1, 5)</span>",
-                            "en": "<span class='formula'>(1, 5)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(6, 0)</span>",
-                            "en": "<span class='formula'>(6, 0)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(-5, -1)</span>",
-                            "en": "<span class='formula'>(-5, -1)</span>"
-                        }
+                    q: { ar: 'عند تقويم تعبير يحتوي على أعمدة القيمة المطلقة، ماذا يجب فعله أولاً؟', en: 'When evaluating an expression with absolute value bars, what should be done first?' },
+                    options: [
+                        { ar: 'إتمام أي عمليات داخل أعمدة القيمة المطلقة كرمز للمجموعات ثم أخذ القيمة المطلقة', en: 'Complete any operations inside the absolute value bars as a grouping symbol, then take the absolute value' },
+                        { ar: 'أخذ القيمة المطلقة أولاً قبل أي عملية أخرى', en: 'Take the absolute value first before any other operation' },
+                        { ar: 'تجاهل أعمدة القيمة المطلقة تماماً', en: 'Ignore the absolute value bars entirely' },
+                        { ar: 'لا يوجد ترتيب محدد للعمليات', en: 'There is no specific order of operations' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "بجمع المعادلتين نحصل على: <span class='formula'>2x = 10 => x = 5</span>. وبالتعويض نحصل على: <span class='formula'>5 + y = 6 => y = 1</span>.",
-                        "en": "Add the two equations: <span class='formula'>2x = 10 => x = 5</span>. Substitute to find y: <span class='formula'>5 + y = 6 => y = 1</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'عند تقويم التعبيرات، تعمل أعمدة القيمة المطلقة كرمز للمجموعات؛ أتم أي عمليات داخل أعمدة القيمة المطلقة أولاً', en: 'When evaluating expressions, absolute value bars act as a grouping symbol; complete any operations inside them first' }
                 },
                 {
-                    "q": {
-                        "ar": "حل المتباينة الخطية التالية: <span class='formula'>3x + 4 < 16</span>",
-                        "en": "Solve the following linear inequality: <span class='formula'>3x + 4 < 16</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>x < 4</span>",
-                            "en": "<span class='formula'>x < 4</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x > 4</span>",
-                            "en": "<span class='formula'>x > 4</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x < -4</span>",
-                            "en": "<span class='formula'>x < -4</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x < 16</span>",
-                            "en": "<span class='formula'>x < 16</span>"
-                        }
+                    q: { ar: 'لماذا تكون القيمة المطلقة لأي رقم دائماً غير سالبة؟', en: 'Why is the absolute value of any number always non-negative?' },
+                    options: [
+                        { ar: 'لأنها تمثل قيمة مسافة، والمسافة لا يمكن أن تكون سالبة', en: 'Because it represents a distance value, and distance cannot be negative' },
+                        { ar: 'لأن كل الأرقام موجبة أصلاً', en: 'Because all numbers are already positive' },
+                        { ar: 'لا يوجد سبب رياضي محدد', en: 'There is no specific mathematical reason' },
+                        { ar: 'لأنها تُحسب بضرب العدد في نفسه', en: 'Because it is calculated by multiplying the number by itself' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نطرح 4 من الطرفين: <span class='formula'>3x < 12</span>. ثم نقسم على 3 مع بقاء اتجاه المتباينة كما هو: <span class='formula'>x < 4</span>.",
-                        "en": "Subtract 4: <span class='formula'>3x < 12</span>. Divide by 3 keeping the sign: <span class='formula'>x < 4</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'حيث أن قيمة المسافة غير سالبة، تصبح القيمة المطلقة لرقم دائماً غير سالبة', en: 'Since a distance value is non-negative, the absolute value of a number is always non-negative' }
                 }
             ]
         },
         {
-            "title": {
-                "ar": "🔹 الجزء الثاني: العمليات الحسابية والحلول العددية الدقيقة",
-                "en": "🔹 Part 2: Calculations and Exact Numerical Solutions"
-            },
-            "questions": [
+            id: 'sec2',
+            title: { ar: '🔹 الجزء الثاني: حل معادلات القيمة المطلقة الأساسية', en: '🔹 Part 2: Solving Basic Absolute Value Equations' },
+            questions: [
                 {
-                    "q": {
-                        "ar": "حل المعادلة الخطية التالية لإيجاد قيمة x: <span class='formula'>3x + 8 = 23</span>",
-                        "en": "Solve the following linear equation for x: <span class='formula'>3x + 8 = 23</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>x = 5</span>",
-                            "en": "<span class='formula'>x = 5</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = 6</span>",
-                            "en": "<span class='formula'>x = 6</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = -5</span>",
-                            "en": "<span class='formula'>x = -5</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = 15</span>",
-                            "en": "<span class='formula'>x = 15</span>"
-                        }
+                    q: { ar: 'عند حل معادلة على الصورة |x-c|=r حيث r≥0، كم عدد الحالات التي يجب فحصها عادةً؟', en: 'When solving an equation of the form |x-c|=r where r≥0, how many cases are typically checked?' },
+                    options: [
+                        { ar: 'حالتان: a=b وa=-b', en: 'Two cases: a=b and a=-b' },
+                        { ar: 'حالة واحدة فقط', en: 'Only one case' },
+                        { ar: 'ثلاث حالات', en: 'Three cases' },
+                        { ar: 'لا حاجة لفحص أي حالات', en: 'No cases need to be checked' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نطرح 8 من الطرفين: <span class='formula'>3x = 15</span>. ثم نقسم على 3: <span class='formula'>x = 5</span>.",
-                        "en": "Subtract 8 from both sides: <span class='formula'>3x = 15</span>. Divide by 3: <span class='formula'>x = 5</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'بالنسبة ألي أرقام حقيقية a وb، حيث 0≤b، في حال كانت |a|=|b| إذاً a=b أو a=-b', en: 'For any real numbers a and b, where b≥0, if |a|=|b| then a=b or a=-b' }
                 },
                 {
-                    "q": {
-                        "ar": "أوجد مجموعة حل معادلة القيمة المطلقة التالية: <span class='formula'>|x - 4| = 4</span>",
-                        "en": "Find the solution set of the following absolute value equation: <span class='formula'>|x - 4| = 4</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>{8, 0}</span>",
-                            "en": "<span class='formula'>{8, 0}</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>{8}</span>",
-                            "en": "<span class='formula'>{8}</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>{-8, 0}</span>",
-                            "en": "<span class='formula'>{-8, 0}</span>"
-                        },
-                        {
-                            "ar": "المجموعة الخالية Ø",
-                            "en": "Empty Set Ø"
-                        }
+                    q: { ar: 'في معادلة القيمة المطلقة |x-c|=r، ماذا تمثل القيمة r؟', en: 'In the equation |x-c|=r, what does the value r represent?' },
+                    options: [
+                        { ar: 'المدى (نصف قطر المسافة) بينما تكون c هي القيمة المركزية', en: 'The range (radius of distance), while c is the central value' },
+                        { ar: 'القيمة المركزية نفسها', en: 'The central value itself' },
+                        { ar: 'لا تمثل شيئاً محدداً', en: 'It does not represent anything specific' },
+                        { ar: 'عدد الحلول الممكنة', en: 'The number of possible solutions' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نفصل المعادلة إلى حالتين: إما <span class='formula'>x - 4 = 4 => x = 8</span> أو <span class='formula'>x - 4 = -4 => x = 0</span>. إذن الحل هو <span class='formula'>{8, 0}</span>.",
-                        "en": "Split into two cases: <span class='formula'>x - 4 = 4 => x = 8</span> or <span class='formula'>x - 4 = -4 => x = 0</span>. Thus, the solution set is <span class='formula'>{8, 0}</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'عندما تكتب معادلة القيمة المطلقة، توضع القيمة الوسطى أو المركزية c داخل رموز القيمة المطلقة، بينما يقع المدى r دائماً في الجانب الآخر', en: 'When writing an absolute value equation, the middle or central value c is placed inside the absolute value symbols, while the range r is always on the other side' }
                 },
                 {
-                    "q": {
-                        "ar": "حل نظام المعادلات الخطية التالي لإيجاد (x, y): <br><span class='formula'>x + y = 3</span><br><span class='formula'>x - y = 1</span>",
-                        "en": "Solve the following system of linear equations for (x, y): <br><span class='formula'>x + y = 3</span><br><span class='formula'>x - y = 1</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>(2, 1)</span>",
-                            "en": "<span class='formula'>(2, 1)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(1, 2)</span>",
-                            "en": "<span class='formula'>(1, 2)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(3, 0)</span>",
-                            "en": "<span class='formula'>(3, 0)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(-2, -1)</span>",
-                            "en": "<span class='formula'>(-2, -1)</span>"
-                        }
+                    q: { ar: 'كيف يتم التحقق من صحة حلول معادلة القيمة المطلقة؟', en: 'How are the solutions of an absolute value equation verified?' },
+                    options: [
+                        { ar: 'بتعويض كل قيمة حل في المعادلة الأصلية والتأكد من تحقق المساواة', en: 'By substituting each solution value into the original equation and confirming the equality holds' },
+                        { ar: 'لا حاجة للتحقق من الحلول أبداً', en: 'There is never a need to verify solutions' },
+                        { ar: 'بجمع الحلين فقط', en: 'By simply adding the two solutions' },
+                        { ar: 'برسم خط الأرقام فقط دون تعويض', en: 'By only drawing a number line without substituting' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "بجمع المعادلتين نحصل على: <span class='formula'>2x = 4 => x = 2</span>. وبالتعويض نحصل على: <span class='formula'>2 + y = 3 => y = 1</span>.",
-                        "en": "Add the two equations: <span class='formula'>2x = 4 => x = 2</span>. Substitute to find y: <span class='formula'>2 + y = 3 => y = 1</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'يتم التحقق من الحلول بتعويض كل قيمة في المعادلة الأصلية والتأكد أن الطرفين متساويان', en: 'Solutions are verified by substituting each value into the original equation and confirming both sides are equal' }
                 },
                 {
-                    "q": {
-                        "ar": "حل المتباينة الخطية التالية: <span class='formula'>4x + 3 < 19</span>",
-                        "en": "Solve the following linear inequality: <span class='formula'>4x + 3 < 19</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>x < 4</span>",
-                            "en": "<span class='formula'>x < 4</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x > 4</span>",
-                            "en": "<span class='formula'>x > 4</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x < -4</span>",
-                            "en": "<span class='formula'>x < -4</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x < 19</span>",
-                            "en": "<span class='formula'>x < 19</span>"
-                        }
+                    q: { ar: 'عند حل |x-100|=20، ما هما الحلان الناتجان؟', en: 'When solving |x-100|=20, what are the two resulting solutions?' },
+                    options: [
+                        { ar: '120 و80', en: '120 and 80' },
+                        { ar: '100 و20 فقط', en: '100 and 20 only' },
+                        { ar: '20 فقط', en: '20 only' },
+                        { ar: 'لا يوجد حل لهذه المعادلة', en: 'This equation has no solution' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نطرح 3 من الطرفين: <span class='formula'>4x < 16</span>. ثم نقسم على 4 مع بقاء اتجاه المتباينة كما هو: <span class='formula'>x < 4</span>.",
-                        "en": "Subtract 3: <span class='formula'>4x < 16</span>. Divide by 4 keeping the sign: <span class='formula'>x < 4</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'في الحالة الأولى x-100=20 يعطي x=120، وفي الحالة الثانية x-100=-20 يعطي x=80', en: 'In the first case x-100=20 gives x=120, and in the second case x-100=-20 gives x=80' }
                 }
             ]
         },
         {
-            "title": {
-                "ar": "🔹 الجزء الثالث: المهارات المتقدمة والتطبيقات والمسائل",
-                "en": "🔹 Part 3: Advanced Skills, Applications, and Problems"
-            },
-            "questions": [
+            id: 'sec3',
+            title: { ar: '🔹 الجزء الثالث: الحلول غير الاعتيادية', en: '🔹 Part 3: Unusual Solutions' },
+            questions: [
                 {
-                    "q": {
-                        "ar": "حل المعادلة الخطية التالية لإيجاد قيمة x: <span class='formula'>6x + 3 = 15</span>",
-                        "en": "Solve the following linear equation for x: <span class='formula'>6x + 3 = 15</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>x = 2</span>",
-                            "en": "<span class='formula'>x = 2</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = 3</span>",
-                            "en": "<span class='formula'>x = 3</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = -2</span>",
-                            "en": "<span class='formula'>x = -2</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = 12</span>",
-                            "en": "<span class='formula'>x = 12</span>"
-                        }
+                    q: { ar: 'لماذا لا يوجد حل لمعادلة مثل |x|=-4؟', en: 'Why does an equation like |x|=-4 have no solution?' },
+                    options: [
+                        { ar: 'لأن القيمة المطلقة لأي رقم لا يمكن أن تكون سالبة أبداً، فالمعادلة غير صحيحة على الإطلاق', en: 'Because the absolute value of any number can never be negative, so the equation is never true' },
+                        { ar: 'لأن x غير معرف', en: 'Because x is undefined' },
+                        { ar: 'لأن -4 عدد كبير جداً', en: 'Because -4 is too large a number' },
+                        { ar: 'يوجد حل لكنه معقد فقط', en: 'A solution exists, but it is just complex' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نطرح 3 من الطرفين: <span class='formula'>6x = 12</span>. ثم نقسم على 6: <span class='formula'>x = 2</span>.",
-                        "en": "Subtract 3 from both sides: <span class='formula'>6x = 12</span>. Divide by 6: <span class='formula'>x = 2</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'ألن القيمة المطلقة لرقم ما دائماً موجبة أو صفر، تصبح المعادلة |x|=-4 غير صحيحة أبداً، ومن ثم ال يوجد لها حل', en: 'Since the absolute value of a number is always positive or zero, the equation |x|=-4 is never true, and thus has no solution' }
                 },
                 {
-                    "q": {
-                        "ar": "أوجد مجموعة حل معادلة القيمة المطلقة التالية: <span class='formula'>|x - 8| = 6</span>",
-                        "en": "Find the solution set of the following absolute value equation: <span class='formula'>|x - 8| = 6</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>{14, 2}</span>",
-                            "en": "<span class='formula'>{14, 2}</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>{14}</span>",
-                            "en": "<span class='formula'>{14}</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>{-14, -2}</span>",
-                            "en": "<span class='formula'>{-14, -2}</span>"
-                        },
-                        {
-                            "ar": "المجموعة الخالية Ø",
-                            "en": "Empty Set Ø"
-                        }
+                    q: { ar: 'كيف يُرمز لمجموعة الحل عندما لا يوجد حل لمعادلة القيمة المطلقة؟', en: 'How is the solution set denoted when an absolute value equation has no solution?' },
+                    options: [
+                        { ar: 'بالمجموعة الفارغة { } أو الرمز ∅', en: 'By the empty set { } or the symbol ∅' },
+                        { ar: 'بالرقم صفر', en: 'By the number zero' },
+                        { ar: 'بمجموعة كل الأعداد الحقيقية', en: 'By the set of all real numbers' },
+                        { ar: 'لا يوجد رمز محدد لذلك', en: 'There is no specific symbol for this' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نفصل المعادلة إلى حالتين: إما <span class='formula'>x - 8 = 6 => x = 14</span> أو <span class='formula'>x - 8 = -6 => x = 2</span>. إذن الحل هو <span class='formula'>{14, 2}</span>.",
-                        "en": "Split into two cases: <span class='formula'>x - 8 = 6 => x = 14</span> or <span class='formula'>x - 8 = -6 => x = 2</span>. Thus, the solution set is <span class='formula'>{14, 2}</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'إن مجموعة الحل لهذا النوع من المعادالت هي مجموعة فارغة، ويرمز لها بـ { } أو ∅', en: 'The solution set for this type of equation is an empty set, denoted by { } or ∅' }
                 },
                 {
-                    "q": {
-                        "ar": "حل نظام المعادلات الخطية التالي لإيجاد (x, y): <br><span class='formula'>x + y = 5</span><br><span class='formula'>x - y = 1</span>",
-                        "en": "Solve the following system of linear equations for (x, y): <br><span class='formula'>x + y = 5</span><br><span class='formula'>x - y = 1</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>(3, 2)</span>",
-                            "en": "<span class='formula'>(3, 2)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(2, 3)</span>",
-                            "en": "<span class='formula'>(2, 3)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(4, 1)</span>",
-                            "en": "<span class='formula'>(4, 1)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(-3, -2)</span>",
-                            "en": "<span class='formula'>(-3, -2)</span>"
-                        }
+                    q: { ar: 'ما هو "الحل غير المنطقي" (extraneous solution) في سياق معادلات القيمة المطلقة؟', en: 'What is an "extraneous solution" in the context of absolute value equations?' },
+                    options: [
+                        { ar: 'قيمة تنتج من حل المعادلة بالأسلوب الصحيح لكنها لا تحقق المعادلة الأصلية عند التعويض', en: 'A value resulting from correctly solving the equation but that does not satisfy the original equation when substituted' },
+                        { ar: 'الحل الصحيح الوحيد للمعادلة', en: 'The only correct solution to the equation' },
+                        { ar: 'حل يجب قبوله دائماً دون تحقق', en: 'A solution that must always be accepted without verification' },
+                        { ar: 'لا يوجد مفهوم كهذا في معادلات القيمة المطلقة', en: 'No such concept exists in absolute value equations' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "بجمع المعادلتين نحصل على: <span class='formula'>2x = 6 => x = 3</span>. وبالتعويض نحصل على: <span class='formula'>3 + y = 5 => y = 2</span>.",
-                        "en": "Add the two equations: <span class='formula'>2x = 6 => x = 3</span>. Substitute to find y: <span class='formula'>3 + y = 5 => y = 2</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'حتى لو تم استخدام األسلوب الصحيح لحل المعادلة، يمكن أال تكون اإلجابات حلوالً حقيقية للمعادلة األصلية، ويسمى هذا الرقم حل غير منطقي', en: 'Even with the correct solving method, the resulting answers may not be actual solutions to the original equation; such a number is called an extraneous solution' }
                 },
                 {
-                    "q": {
-                        "ar": "حل المتباينة الخطية التالية: <span class='formula'>4x + 2 < 10</span>",
-                        "en": "Solve the following linear inequality: <span class='formula'>4x + 2 < 10</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>x < 2</span>",
-                            "en": "<span class='formula'>x < 2</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x > 2</span>",
-                            "en": "<span class='formula'>x > 2</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x < -2</span>",
-                            "en": "<span class='formula'>x < -2</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x < 10</span>",
-                            "en": "<span class='formula'>x < 10</span>"
-                        }
+                    q: { ar: 'ما هو "القيد" (constraint) في سياق حل المسائل الرياضية؟', en: 'What is a "constraint" in the context of solving math problems?' },
+                    options: [
+                        { ar: 'شرط يجب أن يستوفيه الحل حتى يكون مقبولاً في سياق المسألة', en: 'A condition that a solution must satisfy to be acceptable within the context of the problem' },
+                        { ar: 'خطوة اختيارية يمكن تجاهلها', en: 'An optional step that can be ignored' },
+                        { ar: 'لا علاقة له بحل المعادلات', en: 'It is unrelated to solving equations' },
+                        { ar: 'هو نفسه الحل النهائي للمعادلة', en: 'It is the same as the final solution to the equation' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نطرح 2 من الطرفين: <span class='formula'>4x < 8</span>. ثم نقسم على 4 مع بقاء اتجاه المتباينة كما هو: <span class='formula'>x < 2</span>.",
-                        "en": "Subtract 2: <span class='formula'>4x < 8</span>. Divide by 4 keeping the sign: <span class='formula'>x < 2</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'يعتبر القيد شرطاً يجب أن يستوفيه الحل، ويمكن اعتبار المعادالت قيوداً في حل المسألة، ويستوفي حل المعادالت قيود المسألة', en: 'A constraint is a condition a solution must satisfy; equations can be considered constraints in solving a problem, and the equation solution satisfies the problem constraints' }
                 }
             ]
         },
         {
-            "title": {
-                "ar": "🔹 الجزء الرابع: النمذجة الرياضية والتمثيل البياني والمسائل العملية",
-                "en": "🔹 Part 4: Mathematical Modeling, Graphing, and Practical Problems"
-            },
-            "questions": [
+            id: 'sec4',
+            title: { ar: '🔹 الجزء الرابع: كتابة معادلات من مسائل حياتية', en: '🔹 Part 4: Writing Equations from Real-Life Problems' },
+            questions: [
                 {
-                    "q": {
-                        "ar": "حل المعادلة الخطية التالية لإيجاد قيمة x: <span class='formula'>3x + 3 = 18</span>",
-                        "en": "Solve the following linear equation for x: <span class='formula'>3x + 3 = 18</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>x = 5</span>",
-                            "en": "<span class='formula'>x = 5</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = 6</span>",
-                            "en": "<span class='formula'>x = 6</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = -5</span>",
-                            "en": "<span class='formula'>x = -5</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = 15</span>",
-                            "en": "<span class='formula'>x = 15</span>"
-                        }
+                    q: { ar: 'عند كتابة معادلة قيمة مطلقة من مسألة تصف قيمة وسطى ومدى، أين توضع القيمة المركزية عادة؟', en: 'When writing an absolute value equation from a problem describing a central value and a range, where is the central value usually placed?' },
+                    options: [
+                        { ar: 'داخل رموز القيمة المطلقة، بينما يقع المدى في الجانب الآخر من رمز المساواة', en: 'Inside the absolute value symbols, while the range is on the other side of the equals sign' },
+                        { ar: 'خارج رموز القيمة المطلقة دائماً', en: 'Always outside the absolute value symbols' },
+                        { ar: 'لا فرق بين موضعي القيمة المركزية والمدى', en: 'There is no difference between the positions of the central value and the range' },
+                        { ar: 'لا تُستخدم القيمة المركزية إطلاقاً في هذه المعادلات', en: 'The central value is never used in these equations' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نطرح 3 من الطرفين: <span class='formula'>3x = 15</span>. ثم نقسم على 3: <span class='formula'>x = 5</span>.",
-                        "en": "Subtract 3 from both sides: <span class='formula'>3x = 15</span>. Divide by 3: <span class='formula'>x = 5</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'عندما تكتب معادلة القيمة المطلقة، دائماً ما توضع القيمة الوسطى أو المركزية داخل رموز القيمة المطلقة، بينما يقع المدى دائماً في الجانب اآلخر لرمز المتباينة', en: 'When writing an absolute value equation, the middle or central value is always placed inside the absolute value symbols, while the range is always on the other side' }
                 },
                 {
-                    "q": {
-                        "ar": "أوجد مجموعة حل معادلة القيمة المطلقة التالية: <span class='formula'>|x - 2| = 5</span>",
-                        "en": "Find the solution set of the following absolute value equation: <span class='formula'>|x - 2| = 5</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>{7, -3}</span>",
-                            "en": "<span class='formula'>{7, -3}</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>{7}</span>",
-                            "en": "<span class='formula'>{7}</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>{-7, 3}</span>",
-                            "en": "<span class='formula'>{-7, 3}</span>"
-                        },
-                        {
-                            "ar": "المجموعة الخالية Ø",
-                            "en": "Empty Set Ø"
-                        }
+                    q: { ar: 'في مثال درجات حرارة الماء المناسبة لتربية الأسماك بين 2 و78 درجة، كيف تُكتب المعادلة؟', en: 'In the example of suitable fish tank water temperatures between 2 and 78 degrees, how is the equation written?' },
+                    options: [
+                        { ar: '|x-c|=r حيث c القيمة المتوسطة بين الحدين وr نصف المدى بينهما', en: '|x-c|=r where c is the average value between the limits and r is half the range between them' },
+                        { ar: 'x+c=r مباشرة دون قيمة مطلقة', en: 'x+c=r directly without absolute value' },
+                        { ar: 'لا يمكن كتابة معادلة لهذا النوع من المسائل', en: 'An equation cannot be written for this type of problem' },
+                        { ar: 'بضرب الحدين معاً', en: 'By multiplying the two limits together' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نفصل المعادلة إلى حالتين: إما <span class='formula'>x - 2 = 5 => x = 7</span> أو <span class='formula'>x - 2 = -5 => x = -3</span>. إذن الحل هو <span class='formula'>{7, -3}</span>.",
-                        "en": "Split into two cases: <span class='formula'>x - 2 = 5 => x = 7</span> or <span class='formula'>x - 2 = -5 => x = -3</span>. Thus, the solution set is <span class='formula'>{7, -3}</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'تُكتب المعادلة كـ |x-78|=2، حيث c هي القيمة المتوسطة وr نصف المدى بين درجتي الحرارة القصوى والدنيا', en: 'The equation is written as |x-78|=2, where c is the average value and r is half the range between the maximum and minimum temperatures' }
                 },
                 {
-                    "q": {
-                        "ar": "حل نظام المعادلات الخطية التالي لإيجاد (x, y): <br><span class='formula'>x + y = 6</span><br><span class='formula'>x - y = 2</span>",
-                        "en": "Solve the following system of linear equations for (x, y): <br><span class='formula'>x + y = 6</span><br><span class='formula'>x - y = 2</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>(4, 2)</span>",
-                            "en": "<span class='formula'>(4, 2)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(2, 4)</span>",
-                            "en": "<span class='formula'>(2, 4)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(5, 1)</span>",
-                            "en": "<span class='formula'>(5, 1)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(-4, -2)</span>",
-                            "en": "<span class='formula'>(-4, -2)</span>"
-                        }
+                    q: { ar: 'في مسألة تحديد الوزن المقبول لعملة معدنية، ما نوع المعادلة المناسبة؟', en: 'In a problem determining the acceptable weight of a coin, what type of equation is appropriate?' },
+                    options: [
+                        { ar: 'معادلة قيمة مطلقة على الصورة |الوزن الفعلي - الوزن المثالي| = هامش الخطأ', en: '|actual weight - ideal weight| = error margin' },
+                        { ar: 'معادلة خطية بسيطة بدون قيمة مطلقة', en: 'A simple linear equation without absolute value' },
+                        { ar: 'لا يمكن وصف هذه المسألة بمعادلة رياضية', en: 'This problem cannot be described by a mathematical equation' },
+                        { ar: 'معادلة تربيعية', en: 'A quadratic equation' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "بجمع المعادلتين نحصل على: <span class='formula'>2x = 8 => x = 4</span>. وبالتعويض نحصل على: <span class='formula'>4 + y = 6 => y = 2</span>.",
-                        "en": "Add the two equations: <span class='formula'>2x = 8 => x = 4</span>. Substitute to find y: <span class='formula'>4 + y = 6 => y = 2</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'تُكتب معادلة القيمة المطلقة بحيث تمثل الفرق بين وزن العملة الفعلي والوزن المرغوب مقارنة بهامش الخطأ المسموح', en: 'The absolute value equation is written to represent the difference between the actual coin weight and the desired weight compared to the allowed error margin' }
                 },
                 {
-                    "q": {
-                        "ar": "حل المتباينة الخطية التالية: <span class='formula'>3x + 3 < 18</span>",
-                        "en": "Solve the following linear inequality: <span class='formula'>3x + 3 < 18</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>x < 5</span>",
-                            "en": "<span class='formula'>x < 5</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x > 5</span>",
-                            "en": "<span class='formula'>x > 5</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x < -5</span>",
-                            "en": "<span class='formula'>x < -5</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x < 18</span>",
-                            "en": "<span class='formula'>x < 18</span>"
-                        }
+                    q: { ar: 'بعد حل معادلة قيمة مطلقة تصف حدين أقصى وأدنى لكمية فيزيائية، ماذا يمثل كل حل من الحلين الناتجين؟', en: 'After solving an absolute value equation describing maximum and minimum limits of a physical quantity, what does each resulting solution represent?' },
+                    options: [
+                        { ar: 'أحد الحلين يمثل الحد الأقصى والآخر يمثل الحد الأدنى للكمية المسموح بها', en: 'One solution represents the maximum limit, and the other represents the minimum limit of the allowed quantity' },
+                        { ar: 'كلا الحلين يمثلان نفس القيمة', en: 'Both solutions represent the same value' },
+                        { ar: 'أحد الحلين دائماً غير منطقي ويُستبعد', en: 'One solution is always extraneous and excluded' },
+                        { ar: 'لا علاقة للحلول بحدود الكمية', en: 'The solutions are unrelated to the limits of the quantity' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نطرح 3 من الطرفين: <span class='formula'>3x < 15</span>. ثم نقسم على 3 مع بقاء اتجاه المتباينة كما هو: <span class='formula'>x < 5</span>.",
-                        "en": "Subtract 3: <span class='formula'>3x < 15</span>. Divide by 3 keeping the sign: <span class='formula'>x < 5</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'الحلول هي القيم القصوى والدنيا المقبولة، مثل أكبر حجم وأقل حجم في مثال مضرب التنس', en: 'The solutions are the accepted maximum and minimum values, such as the largest and smallest size in the tennis racket example' }
                 }
             ]
         },
         {
-            "title": {
-                "ar": "🔹 الجزء الخامس: مهارات التفكير العليا والتحليل والربط المنطقي",
-                "en": "🔹 Part 5: Higher-Order Thinking, Analysis, and Logical Connections"
-            },
-            "questions": [
+            id: 'sec5',
+            title: { ar: '🔹 الجزء الخامس: حالات خاصة ومسائل متقدمة', en: '🔹 Part 5: Special Cases & Advanced Problems' },
+            questions: [
                 {
-                    "q": {
-                        "ar": "حل المعادلة الخطية التالية لإيجاد قيمة x: <span class='formula'>6x + 9 = 21</span>",
-                        "en": "Solve the following linear equation for x: <span class='formula'>6x + 9 = 21</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>x = 2</span>",
-                            "en": "<span class='formula'>x = 2</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = 3</span>",
-                            "en": "<span class='formula'>x = 3</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = -2</span>",
-                            "en": "<span class='formula'>x = -2</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x = 12</span>",
-                            "en": "<span class='formula'>x = 12</span>"
-                        }
+                    q: { ar: 'عند حل معادلة تحتوي على قيمتين مطلقتين معاً، كم عدد الحالات المحتملة التي يجب فحصها عادة؟', en: 'When solving an equation containing two absolute values together, how many possible cases are typically checked?' },
+                    options: [
+                        { ar: 'أربع حالات ممكنة نظراً لوجود قيمتين مطلقتين مختلفتين', en: 'Four possible cases due to the presence of two different absolute values' },
+                        { ar: 'حالة واحدة فقط', en: 'Only one case' },
+                        { ar: 'حالتان فقط دائماً', en: 'Always only two cases' },
+                        { ar: 'لا يمكن حل هذا النوع من المعادلات', en: 'This type of equation cannot be solved' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نطرح 9 من الطرفين: <span class='formula'>6x = 12</span>. ثم نقسم على 6: <span class='formula'>x = 2</span>.",
-                        "en": "Subtract 9 from both sides: <span class='formula'>6x = 12</span>. Divide by 6: <span class='formula'>x = 2</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'عند وجود قيمتين مطلقتين مختلفتين في المعادلة، توجد أربع حاالت ممكنة يجب فحصها باعتبارها حلوالً محتملة', en: 'When two different absolute values appear in the equation, there are four possible cases that must be checked as potential solutions' }
                 },
                 {
-                    "q": {
-                        "ar": "أوجد مجموعة حل معادلة القيمة المطلقة التالية: <span class='formula'>|x - 2| = 4</span>",
-                        "en": "Find the solution set of the following absolute value equation: <span class='formula'>|x - 2| = 4</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>{6, -2}</span>",
-                            "en": "<span class='formula'>{6, -2}</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>{6}</span>",
-                            "en": "<span class='formula'>{6}</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>{-6, 2}</span>",
-                            "en": "<span class='formula'>{-6, 2}</span>"
-                        },
-                        {
-                            "ar": "المجموعة الخالية Ø",
-                            "en": "Empty Set Ø"
-                        }
+                    q: { ar: 'عند حل معادلة قيمة مطلقة ينتج عنها حلان مبدئياً، لماذا قد يُستبعد أحد الحلين لاحقاً؟', en: 'When solving an absolute value equation initially yields two solutions, why might one be excluded later?' },
+                    options: [
+                        { ar: 'لأنه عند التعويض في المعادلة الأصلية لا يحقق المساواة، فيكون حلاً غير منطقي', en: 'Because when substituted into the original equation, it does not satisfy the equality, making it an extraneous solution' },
+                        { ar: 'لأنه دائماً عدد سالب', en: 'Because it is always a negative number' },
+                        { ar: 'لأن كلا الحلين يُقبلان دائماً دون استثناء', en: 'Because both solutions are always accepted without exception' },
+                        { ar: 'لأنه أكبر من الحل الآخر فقط', en: 'Because it is simply larger than the other solution' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نفصل المعادلة إلى حالتين: إما <span class='formula'>x - 2 = 4 => x = 6</span> أو <span class='formula'>x - 2 = -4 => x = -2</span>. إذن الحل هو <span class='formula'>{6, -2}</span>.",
-                        "en": "Split into two cases: <span class='formula'>x - 2 = 4 => x = 6</span> or <span class='formula'>x - 2 = -4 => x = -2</span>. Thus, the solution set is <span class='formula'>{6, -2}</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'حتى لو تم استخدام الأسلوب الصحيح لحل المعادلة، يمكن أال تكون اإلجابات حلوالً حقيقة للمعادلة األصلية، فيُستبعد هذا الحل غير المنطقي', en: 'Even with the correct solving method, an answer may not be a real solution to the original equation, so this extraneous solution is excluded' }
                 },
                 {
-                    "q": {
-                        "ar": "حل نظام المعادلات الخطية التالي لإيجاد (x, y): <br><span class='formula'>x + y = 9</span><br><span class='formula'>x - y = 1</span>",
-                        "en": "Solve the following system of linear equations for (x, y): <br><span class='formula'>x + y = 9</span><br><span class='formula'>x - y = 1</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>(5, 4)</span>",
-                            "en": "<span class='formula'>(5, 4)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(4, 5)</span>",
-                            "en": "<span class='formula'>(4, 5)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(6, 3)</span>",
-                            "en": "<span class='formula'>(6, 3)</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>(-5, -4)</span>",
-                            "en": "<span class='formula'>(-5, -4)</span>"
-                        }
+                    q: { ar: 'كيف يمكن كتابة معادلة قيمة مطلقة على الصورة |ax+b|=cx+d بحيث لا يكون لها حل؟', en: 'How can an absolute value equation of the form |ax+b|=cx+d be written so it has no solution?' },
+                    options: [
+                        { ar: 'باختيار معاملات بحيث يؤدي حل الحالتين الناتجتين إلى قيم متناقضة مع شرط عدم سلبية القيمة المطلقة', en: 'By choosing coefficients such that solving the two resulting cases leads to values contradicting the non-negativity condition of absolute value' },
+                        { ar: 'بجعل جميع المعاملات أصفاراً', en: 'By making all coefficients zero' },
+                        { ar: 'لا يمكن أبداً إنشاء معادلة قيمة مطلقة بلا حل', en: 'It is never possible to create an absolute value equation with no solution' },
+                        { ar: 'بجعل a يساوي c فقط بغض النظر عن باقي المعاملات', en: 'By simply making a equal to c regardless of the other coefficients' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "بجمع المعادلتين نحصل على: <span class='formula'>2x = 10 => x = 5</span>. وبالتعويض نحصل على: <span class='formula'>5 + y = 9 => y = 4</span>.",
-                        "en": "Add the two equations: <span class='formula'>2x = 10 => x = 5</span>. Substitute to find y: <span class='formula'>5 + y = 9 => y = 4</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'يمكن اختيار المعاملات a وb وc وd بحيث يكون الطرف الأيمن سالباً دائماً في مجال حل المتغير، مما يجعل المعادلة بلا حل', en: 'The coefficients a, b, c, and d can be chosen so the right side is always negative for the variable\'s solution range, making the equation unsolvable' }
                 },
                 {
-                    "q": {
-                        "ar": "حل المتباينة الخطية التالية: <span class='formula'>5x + 2 < 17</span>",
-                        "en": "Solve the following linear inequality: <span class='formula'>5x + 2 < 17</span>"
-                    },
-                    "options": [
-                        {
-                            "ar": "<span class='formula'>x < 3</span>",
-                            "en": "<span class='formula'>x < 3</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x > 3</span>",
-                            "en": "<span class='formula'>x > 3</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x < -3</span>",
-                            "en": "<span class='formula'>x < -3</span>"
-                        },
-                        {
-                            "ar": "<span class='formula'>x < 17</span>",
-                            "en": "<span class='formula'>x < 17</span>"
-                        }
+                    q: { ar: 'كيف تُستخدم الرموز في الرياضيات لتمثيل الأفكار مثل مفهوم القيمة المطلقة؟', en: 'How are symbols used in mathematics to represent ideas like the concept of absolute value?' },
+                    options: [
+                        { ar: 'الرموز مثل |x| تقدم طريقة موجزة ودقيقة للتعبير عن مفاهيم مثل المسافة عن الصفر دون الحاجة لصياغة لفظية طويلة', en: 'Symbols like |x| provide a concise and precise way to express concepts like distance from zero without lengthy verbal description' },
+                        { ar: 'الرموز لا تخدم أي غرض عملي', en: 'Symbols serve no practical purpose' },
+                        { ar: 'الرموز تُستخدم فقط للتعقيد دون فائدة', en: 'Symbols are used only to add complexity without benefit' },
+                        { ar: 'لا علاقة للرموز بالمفاهيم الرياضية', en: 'Symbols are unrelated to mathematical concepts' }
                     ],
-                    "correct": 0,
-                    "answer": {
-                        "ar": "نطرح 2 من الطرفين: <span class='formula'>5x < 15</span>. ثم نقسم على 5 مع بقاء اتجاه المتباينة كما هو: <span class='formula'>x < 3</span>.",
-                        "en": "Subtract 2: <span class='formula'>5x < 15</span>. Divide by 5 keeping the sign: <span class='formula'>x < 3</span>."
-                    }
+                    correct: 0,
+                    answer: { ar: 'تُستخدم الرموز الرياضية مثل رمز القيمة المطلقة |x| لتمثيل الأفكار الرياضية بإيجاز ودقة، مثل استخدامها لتمثيل المسافة بين رقم والصفر', en: 'Mathematical symbols like the absolute value symbol |x| are used to represent mathematical ideas concisely and precisely, such as representing the distance between a number and zero' }
                 }
             ]
         }
@@ -816,6 +444,8 @@ function prepareShuffledExam() {
             globalIdx++;
         });
     });
+    
+    console.log('✅ تم خلط الأسئلة والخيارات بنجاح');
 }
 
 function reshuffleExam() {
@@ -852,8 +482,8 @@ function setLanguage(lang) {
 function renderExam() {
     const container = document.getElementById('exam-content');
     const labels = {
-        ar: { option: ['أ', 'ب', 'ج', 'د'], answer: '✅ الإجابة الصحيحة:' },
-        en: { option: ['A', 'B', 'C', 'D'], answer: '✅ Correct Answer:' }
+        ar: { option: ['أ', 'ب', 'ج', 'د'], answer: '✅ الإجابة:' },
+        en: { option: ['A', 'B', 'C', 'D'], answer: '✅ Answer:' }
     };
     const lbl = labels[currentLang];
     const isRTL = currentLang === 'ar';
@@ -864,13 +494,13 @@ function renderExam() {
     examData.sections.forEach((section) => {
         html += `
         <section class="bg-white p-6 rounded-xl shadow-lg">
-            <h2 class="text-xl font-bold mb-4 text-teal-700">${section.title[currentLang]}</h2>
+            <h2 class="text-xl font-bold mb-4 text-amber-800">${section.title[currentLang]}</h2>
             <ol class="space-y-4 text-sm">`;
             
         section.questions.forEach((q) => {
             const borderSide = isRTL ? 'border-r-4 pr-4' : 'border-l-4 pl-4';
             html += `
-                <li class="${borderSide} border-teal-500 py-2" id="q-${globalIdx}">
+                <li class="${borderSide} border-amber-600 py-2" id="q-${globalIdx}">
                     <strong>${globalIdx + 1}.</strong> ${q.q[currentLang]}<br>`;
                     
             q.options.forEach((opt, oIdx) => {
@@ -935,17 +565,15 @@ function gradeExam() {
                 correctCount++;
                 li.classList.add('correct');
                 li.classList.remove('incorrect');
-            } else {
-                li.classList.add('incorrect');
-                li.classList.remove('correct');
-            }
-
-            if (isCorrect) {
+                
                 if (i < 4) sec1++;
                 else if (i < 8) sec2++;
                 else if (i < 12) sec3++;
                 else if (i < 16) sec4++;
                 else sec5++;
+            } else {
+                li.classList.add('incorrect');
+                li.classList.remove('correct');
             }
         }
     }
@@ -953,7 +581,7 @@ function gradeExam() {
     const score = (correctCount / 20) * 100;
     const successRate = Math.round(score);
     
-    document.getElementById('res-total').textContent = `${successRate} / 100`;
+    document.getElementById('res-total').textContent = `${Math.round(score)} / 100`;
     document.getElementById('res-name').textContent = document.getElementById('studentName').value || (currentLang === 'ar' ? 'طالب' : 'Student');
     document.getElementById('res-date').textContent = new Date().toLocaleDateString(currentLang === 'ar' ? 'ar-AE' : 'en-US');
     
@@ -998,85 +626,74 @@ function sendResultsToEmail() {
     const badge = document.getElementById('success-badge').textContent;
 
     const sectionNames = {
-        ar: [
-            "الجزء الأول: المفاهيم والقواعد الأساسية والتعريفات",
-            "الجزء الثاني: العمليات الحسابية والحلول العددية الدقيقة",
-            "الجزء الثالث: المهارات المتقدمة والتطبيقات والمسائل",
-            "الجزء الرابع: النمذجة الرياضية والتمثيل البياني والمسائل العملية",
-            "الجزء الخامس: مهارات التفكير العليا والتحليل والربط المنطقي"
-        ],
-        en: [
-            "Part 1: Basic Concepts, Rules, and Definitions",
-            "Part 2: Calculations and Exact Numerical Solutions",
-            "Part 3: Advanced Skills, Applications, and Problems",
-            "Part 4: Mathematical Modeling, Graphing, and Practical Problems",
-            "Part 5: Higher-Order Thinking, Analysis, and Logical Connections"
-        ]
+        ar: ['تعريف القيمة المطلقة وتقويم التعبيرات', 'حل معادلات القيمة المطلقة الأساسية', 'الحلول غير الاعتيادية', 'كتابة معادلات من مسائل حياتية', 'حالات خاصة ومسائل متقدمة'],
+        en: ['Definition & Evaluating Expressions', 'Solving Basic Absolute Value Equations', 'Unusual Solutions', 'Writing Equations from Real-Life Problems', 'Special Cases & Advanced Problems']
     };
     const currentSectionNames = sectionNames[currentLang];
 
     let answersHTML = `
-        <div style="font-family: 'Segoe UI', Tahoma, Arial, sans-serif; direction: \${currentLang === 'ar' ? 'rtl' : 'ltr'}; text-align: \${currentLang === 'ar' ? 'right' : 'left'};">
-            <div style="background: linear-gradient(135deg, #0d9488, #0891b2); color: white; padding: 20px; border-radius: 10px 10px 0 0; text-align: center;">
-                <h2 style="margin: 0; font-size: 22px;">⚡ \${currentLang === 'ar' ? 'نتيجة امتحان الرياضيات والتحليل التفاعلي' : 'Math Interactive Exam Result'}</h2>
-                <p style="margin: 5px 0 0 0; opacity: 0.9;">\${currentLang === 'ar' ? 'رياضيات الصف الحادي عشر عام | الفصل الدراسي الأول' : 'Grade 11 General Math | Term 1'}</p>
-                <p style="margin: 5px 0 0 0; font-size: 12px; opacity: 0.8;">🔀 \${currentLang === 'ar' ? 'تم خلط الأسئلة تلقائياً' : 'Questions were randomly shuffled'}</p>
+        <div style="font-family: 'Segoe UI', Tahoma, Arial, sans-serif; direction: ${currentLang === 'ar' ? 'rtl' : 'ltr'};">
+            <div style="background: linear-gradient(135deg, #b45309, #c2410c); color: white; padding: 20px; border-radius: 10px 10px 0 0; text-align: center;">
+                <h2 style="margin: 0; font-size: 22px;">🧮 ${currentLang === 'ar' ? 'نتيجة امتحان حل معادلات القيمة المطلقة' : 'Absolute Value Equations Exam Result'}</h2>
+                <p style="margin: 5px 0 0 0; opacity: 0.9;">${currentLang === 'ar' ? 'Solving Absolute Value Equations' : 'Solving Absolute Value Equations'}</p>
+                <p style="margin: 5px 0 0 0; font-size: 12px; opacity: 0.8;">🔀 ${currentLang === 'ar' ? 'تم خلط الأسئلة تلقائياً' : 'Questions were randomly shuffled'}</p>
             </div>
             
-            <div style="background: #f0fdfa; padding: 15px; border: 1px solid #99f6e4;">
+            <div style="background: #fffbeb; padding: 15px; border: 1px solid #fde68a;">
                 <table style="width: 100%; border-collapse: collapse;">
                     <tr>
-                        <td style="padding: 8px; font-weight: bold; color: #0f766e;">\${currentLang === 'ar' ? '👤 الاسم:' : '👤 Name:'}</td>
-                        <td style="padding: 8px;">\${name}</td>
-                        <td style="padding: 8px; font-weight: bold; color: #0f766e;">\${currentLang === 'ar' ? '🏫 الشعبة:' : '🏫 Class:'}</td>
-                        <td style="padding: 8px;">\${studentClass}</td>
+                        <td style="padding: 8px; font-weight: bold; color: #92400e;">${currentLang === 'ar' ? '👤 الاسم:' : '👤 Name:'}</td>
+                        <td style="padding: 8px;">${name}</td>
+                        <td style="padding: 8px; font-weight: bold; color: #92400e;">${currentLang === 'ar' ? '🏫 الشعبة:' : '🏫 Class:'}</td>
+                        <td style="padding: 8px;">${studentClass}</td>
                     </tr>
                     <tr>
-                        <td style="padding: 8px; font-weight: bold; color: #0f766e;">\${currentLang === 'ar' ? '📅 التاريخ:' : '📅 Date:'}</td>
-                        <td style="padding: 8px;">\${date}</td>
-                        <td style="padding: 8px; font-weight: bold; color: #0f766e;">\${currentLang === 'ar' ? '🏆 التقدير:' : '🏆 Grade:'}</td>
-                        <td style="padding: 8px;">\${badge}</td>
+                        <td style="padding: 8px; font-weight: bold; color: #92400e;">${currentLang === 'ar' ? '📅 التاريخ:' : '📅 Date:'}</td>
+                        <td style="padding: 8px;">${date}</td>
+                        <td style="padding: 8px; font-weight: bold; color: #92400e;">${currentLang === 'ar' ? '🏆 التقدير:' : '🏆 Grade:'}</td>
+                        <td style="padding: 8px;">${badge}</td>
                     </tr>
                 </table>
             </div>
 
             <div style="background: white; padding: 20px; text-align: center; border-bottom: 2px solid #e5e7eb;">
                 <div style="display: inline-block; margin: 0 15px;">
-                    <div style="font-size: 32px; font-weight: bold; color: #0d9488;">\${score}</div>
-                    <div style="color: #6b7280; font-size: 13px;">\${currentLang === 'ar' ? 'الدرجة الكلية' : 'Total Score'}</div>
+                    <div style="font-size: 32px; font-weight: bold; color: #b45309;">${score}</div>
+                    <div style="color: #6b7280; font-size: 13px;">${currentLang === 'ar' ? 'الدرجة الكلية' : 'Total Score'}</div>
                 </div>
                 <div style="display: inline-block; margin: 0 15px;">
-                    <div style="font-size: 32px; font-weight: bold; color: #059669;">\${successRate}%</div>
-                    <div style="color: #6b7280; font-size: 13px;">\${currentLang === 'ar' ? 'نسبة النجاح' : 'Success Rate'}</div>
+                    <div style="font-size: 32px; font-weight: bold; color: #059669;">${successRate}%</div>
+                    <div style="color: #6b7280; font-size: 13px;">${currentLang === 'ar' ? 'نسبة النجاح' : 'Success Rate'}</div>
                 </div>
             </div>
 
             <h3 style="background: #f3f4f6; padding: 12px; margin: 0; color: #1f2937; border-bottom: 2px solid #d1d5db;">
-                \${currentLang === 'ar' ? '📝 تفاصيل الإجابات' : '📝 Answer Details'}
+                📝 ${currentLang === 'ar' ? 'تفاصيل الإجابات' : 'Answer Details'}
             </h3>
             <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
                 <thead>
-                    <tr style="background: #0d9488; color: white;">
-                        <th style="padding: 10px; border: 1px solid #0b7d73; width: 8%;">#</th>
-                        <th style="padding: 10px; border: 1px solid #0b7d73; width: 32%;">\${currentLang === 'ar' ? 'القسم' : 'Section'}</th>
-                        <th style="padding: 10px; border: 1px solid #0b7d73; width: 15%;">\${currentLang === 'ar' ? 'الإجابة' : 'Answer'}</th>
-                        <th style="padding: 10px; border: 1px solid #0b7d73; width: 15%;">\${currentLang === 'ar' ? 'الصحيحة' : 'Correct'}</th>
-                        <th style="padding: 10px; border: 1px solid #0b7d73; width: 15%;">\${currentLang === 'ar' ? 'النتيجة' : 'Status'}</th>
+                    <tr style="background: #b45309; color: white;">
+                        <th style="padding: 10px; border: 1px solid #92400e; width: 8%;">#</th>
+                        <th style="padding: 10px; border: 1px solid #92400e; width: 32%;">${currentLang === 'ar' ? 'القسم' : 'Section'}</th>
+                        <th style="padding: 10px; border: 1px solid #92400e; width: 15%;">${currentLang === 'ar' ? 'الإجابة' : 'Answer'}</th>
+                        <th style="padding: 10px; border: 1px solid #92400e; width: 15%;">${currentLang === 'ar' ? 'الصحيحة' : 'Correct'}</th>
+                        <th style="padding: 10px; border: 1px solid #92400e; width: 15%;">${currentLang === 'ar' ? 'النتيجة' : 'Status'}</th>
                     </tr>
                 </thead>
                 <tbody>
     `;
 
-    let sectionScores = [sec1, sec2, sec3, sec4, sec5];
+    let sectionScores = [0, 0, 0, 0, 0];
     let sectionTotals = [4, 4, 4, 4, 4];
 
     for (let i = 0; i < 20; i++) {
-        const selected = document.querySelector(`input[name="q\${i}"]:checked`);
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
         const selectedValue = selected ? selected.value : '-';
         const correctValue = correctAnswersMap[i];
         const isCorrect = selectedValue === correctValue;
         
         const sectionIndex = Math.floor(i / 4);
+        if (isCorrect) sectionScores[sectionIndex]++;
 
         const rowBg = i % 2 === 0 ? '#f9fafb' : '#ffffff';
         const statusBg = isCorrect ? '#dcfce7' : '#fee2e2';
@@ -1087,13 +704,13 @@ function sendResultsToEmail() {
             : (currentLang === 'ar' ? 'خطأ' : 'Wrong');
 
         answersHTML += `
-            <tr style="background: \${rowBg};">
-                <td style="padding: 8px; border: 1px solid #e5e7eb; text-align: center; font-weight: bold;">\${i + 1}</td>
-                <td style="padding: 8px; border: 1px solid #e5e7eb;">\${currentSectionNames[sectionIndex]}</td>
-                <td style="padding: 8px; border: 1px solid #e5e7eb; text-align: center; font-weight: bold;">\${selectedValue.toUpperCase()}</td>
-                <td style="padding: 8px; border: 1px solid #e5e7eb; text-align: center; font-weight: bold; color: #059669;">\${correctValue.toUpperCase()}</td>
-                <td style="padding: 8px; border: 1px solid #e5e7eb; text-align: center; background: \${statusBg}; color: \${statusColor}; font-weight: bold;">
-                    \${statusIcon} \${statusText}
+            <tr style="background: ${rowBg};">
+                <td style="padding: 8px; border: 1px solid #e5e7eb; text-align: center; font-weight: bold;">${i + 1}</td>
+                <td style="padding: 8px; border: 1px solid #e5e7eb;">${currentSectionNames[sectionIndex]}</td>
+                <td style="padding: 8px; border: 1px solid #e5e7eb; text-align: center; font-weight: bold;">${selectedValue.toUpperCase()}</td>
+                <td style="padding: 8px; border: 1px solid #e5e7eb; text-align: center; font-weight: bold; color: #059669;">${correctValue.toUpperCase()}</td>
+                <td style="padding: 8px; border: 1px solid #e5e7eb; text-align: center; background: ${statusBg}; color: ${statusColor}; font-weight: bold;">
+                    ${statusIcon} ${statusText}
                 </td>
             </tr>
         `;
@@ -1103,15 +720,15 @@ function sendResultsToEmail() {
                 </tbody>
             </table>
 
-            <h3 style="background: #f3f4f6; padding: 12px; margin: 0; color: #1f2937; border-bottom: 2px solid #d1d5db; border-top: 3px solid #0d9488;">
-                📊 \${currentLang === 'ar' ? 'تفصيل الأداء' : 'Performance Breakdown'}
+            <h3 style="background: #f3f4f6; padding: 12px; margin: 0; color: #1f2937; border-bottom: 2px solid #d1d5db; border-top: 3px solid #b45309;">
+                📊 ${currentLang === 'ar' ? 'تفصيل الأداء' : 'Performance Breakdown'}
             </h3>
             <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
                 <thead>
-                    <tr style="background: #7c3aed; color: white;">
-                        <th style="padding: 10px; border: 1px solid #6d28d9;">\${currentLang === 'ar' ? 'القسم' : 'Section'}</th>
-                        <th style="padding: 10px; border: 1px solid #6d28d9; width: 20%;">\${currentLang === 'ar' ? 'النتيجة' : 'Score'}</th>
-                        <th style="padding: 10px; border: 1px solid #6d28d9; width: 20%;">\${currentLang === 'ar' ? 'النسبة' : 'Percentage'}</th>
+                    <tr style="background: #c2410c; color: white;">
+                        <th style="padding: 10px; border: 1px solid #9a3412;">${currentLang === 'ar' ? 'القسم' : 'Section'}</th>
+                        <th style="padding: 10px; border: 1px solid #9a3412; width: 20%;">${currentLang === 'ar' ? 'النتيجة' : 'Score'}</th>
+                        <th style="padding: 10px; border: 1px solid #9a3412; width: 20%;">${currentLang === 'ar' ? 'النسبة' : 'Percentage'}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1123,16 +740,16 @@ function sendResultsToEmail() {
         const rowBg = i % 2 === 0 ? '#f9fafb' : '#ffffff';
         
         answersHTML += `
-            <tr style="background: \${rowBg};">
-                <td style="padding: 10px; border: 1px solid #e5e7eb; font-weight: 600;">\${currentSectionNames[i]}</td>
-                <td style="padding: 10px; border: 1px solid #e5e7eb; text-align: center; font-weight: bold; color: #0d9488;">
-                    \${sectionScores[i]} / \${sectionTotals[i]}
+            <tr style="background: ${rowBg};">
+                <td style="padding: 10px; border: 1px solid #e5e7eb; font-weight: 600;">${currentSectionNames[i]}</td>
+                <td style="padding: 10px; border: 1px solid #e5e7eb; text-align: center; font-weight: bold; color: #b45309;">
+                    ${sectionScores[i]} / ${sectionTotals[i]}
                 </td>
                 <td style="padding: 10px; border: 1px solid #e5e7eb;">
                     <div style="background: #e5e7eb; border-radius: 10px; overflow: hidden; height: 20px; position: relative;">
-                        <div style="background: \${barColor}; width: \${percentage}%; height: 100%;"></div>
+                        <div style="background: ${barColor}; width: ${percentage}%; height: 100%;"></div>
                         <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 11px; font-weight: bold; color: #1f2937;">
-                            \${percentage}%
+                            ${percentage}%
                         </span>
                     </div>
                 </td>
@@ -1146,8 +763,8 @@ function sendResultsToEmail() {
 
             <div style="background: linear-gradient(135deg, #fef3c7, #fde68a); padding: 15px; border-radius: 0 0 10px 10px; border-top: 2px solid #f59e0b;">
                 <p style="margin: 0; color: #78350f; text-align: center; font-size: 13px;">
-                    💡 <strong>\${currentLang === 'ar' ? 'ملاحظة:' : 'Note:'}</strong> 
-                    \${currentLang === 'ar' 
+                    💡 <strong>${currentLang === 'ar' ? 'ملاحظة:' : 'Note:'}</strong> 
+                    ${currentLang === 'ar' 
                         ? 'تم إرسال هذا التقرير تلقائياً من منصة 4U التعليمية | Mr. Mohammed Hesham' 
                         : 'This report was automatically sent from 4U Educational Platform | Mr. Mohammed Hesham'}
                 </p>
